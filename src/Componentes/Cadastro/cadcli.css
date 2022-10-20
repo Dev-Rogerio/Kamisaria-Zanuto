@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.containner_cadcli {
+  display: grid;
+  grid-template-columns: 1fr  25% 1fr;
+  grid-template-rows: auto 450px auto;
+  grid-template-areas:
+      "header header header"
+      "aside aside aside"
+      "footer footer footer" 
+
+  ;
+  grid-gap: 5px;
+  padding: 5px;
+}
+
+
+/*========================================HEADER */
+
+.header_cadcli {
+  display: grid;
+  display: flex;
+  grid-area: header;
+  background-color: #fff;
+  grid-column: 1/ 4;
+ 
+}
+.logo_cadcli {
+  display: flex;
+  grid-area: header;
+  grid-column: 2/3;
+  grid-row: 1;
+  width: 130px;
+  height: 170px;
+  justify-self: center;
+  
+}
+.kz_cadcli {  
+  grid-area: header;
+  grid-column: 2;
+  margin-top: 150px;
+  text-align: center;
+  padding: 5px;
+  font-size: 1.4rem;
+  font-family: "Times New Roman", Times, serif;
+  background-color: #fff;
+ 
+  
+}
+
+/*========================================ul > li */
+
+.menu_cadcli {
+  display: flex;
+  grid-area: header;
+  grid-column: 3/4;
+  align-items: center;
+  margin-top: -75px;
+}
+
+.menu_cadcli ul {
+  display: grid;
+  grid-column-end: 2;
+  height: 70px;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;  
+}
+
+.menu_cadcli ul li {
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  width: 102px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-family: monospace;
+  z-index: 0;
+}
+
+.menu_cadcli ul li:hover {
+  background-color: #222;
+  color: #e9941a;
+}
+.menu_cadcli ul ul {
+  display: none;
+}
+.menu_cadcli ul li:hover > ul {
+  display: block;
+  margin-top: 1px;
+}
+.menu_cadcli ul ul li:hover {
+  background-color: #e9941a;
+  color: #000;
+  font-size: 10px;  
+}
+
+
+/*===========================================================AASIDE*/
+
+
+
+.card_cadcli {  
+  display: flex;
+  display: grid;
+  grid-template-columns: 48% 52%;
+  margin-top: 20px;
+  grid-column: 1 / 4;
+  padding: 50px;
+  grid-template-areas: "main" "main"; 
+  height: 320px;
+  border: 2px solid  #222;
+  grid-gap: 15px;
+  background-color: #fff;
+  justify-content: center;
+  align-content: center;
+  margin-top: 50px;
+  justify-items: center;
+  
+  
+  
+  
+}
+.card_pessoais {
+  text-align: center;
+  background: rgb(117, 116, 116);
+  padding: 5px;  
+  border-radius: 5px 5px 0px 0px;
+  grid-column: 1/2;
+  height: 45px;
+  /* width: 98.8%; */
+  margin: 0;
+ 
+}
+.card_resid {
+  background: rgb(117, 116, 116);
+  grid-row: 2;
+  grid-column: 2/4;
+  /* padding: 5px; */
+  border-radius: 5px 5px 0px 0px;
+  text-align: center;
+  height: 45px;
+  width: 99%;
+  padding: 5px;
+ 
+}
+/*==================================card_col1 */
+.bloco_pessoal {
+  display: grid;  
+ 
+}
+.card_dados {
+  display: flex;
+  background: rgb(117, 116, 116);
+  padding: 25px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: bolder ;
+  grid-column: 1 / 4;
+  text-align: center;
+  height: 25px;
+  width: 94.6%;
+  border-radius: 5px;
+  /* border: 2px solid #222; */
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 1px solid #e9941a;
+  
+}
+
+.card_col1 { 
+ 
+  background: #ccc;
+  grid-column: 1 / 2;
+  grid-area: main;
+  grid-row: 2;
+  width: 100%;
+  justify-content: center;
+  margin-left: 54px;
+  border-radius: 5px;
+  border: 1px solid #e9941a;
+  height: 210px;
+  
+ 
+}
+.card_col2 {
+  background: #ccc;
+  grid-column: 2 / 4;
+  width: 94.3%;
+  justify-content: center;
+  border-radius: 5px;
+  border: 1px solid #e9941a;
+  height: 210px;
+  
+ 
+}
+
+.l_nome {
+  display: block;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  grid-row: 1;
+  grid-column: 1/3;  
+ 
+}
+.nome { 
+  display: block;
+  display: flex;
+  margin-left: 20px;
+  grid-row: 2;
+  grid-column: 1/3;
+  background: #ffffff;
+  width: 150px;
+  outline: 0;
+  
+}
+.l_snome {
+  display: block;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 190px;
+  grid-row: 1;
+  grid-column: 1 / 2;
+  
+
+}
+.snome {
+  display: block;
+  display: flex;  
+  outline: 0;
+  grid-column: 1/3;
+  margin-left: 190px;
+  grid-row: 2;
+  width: 250px;
+  background: #ffffff;
+ 
+
+}
+.l_email {
+  display: block;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 459px;
+  grid-column: 1 / 3;
+  grid-row: 1;
+  
+}
+.email {
+  display: block;
+  display: flex; 
+  grid-row: 2;
+  margin-left: 459px;
+  width: 360px;
+  background: #ffffff;
+  grid-column: 1 /3;
+  outline: 0;
+
+
+}
+.l_cel {
+  display: block;
+  display: flex;
+  margin-top: 10px;
+  grid-row: 3;
+  margin-left: 20px;
+  grid-column: 1 / 3;
+ 
+
+}
+.cel {
+  display: block;
+  display: flex;
+  margin-top: 29px;
+  margin-left: 20px;
+  background: #ffffff;
+  grid-row: 3;
+  grid-column: 1 / 2;
+  width: 150px;
+  outline: 0;
+  
+
+}
+.l_data {
+  display: block;
+  display: flex;
+  margin-top: 10px;
+  grid-row: 3;
+  margin-left: 190px;
+  grid-column: 1 / 3;
+ 
+}
+.data { 
+  display: block;
+  display: flex;
+  margin-top: 29px;
+  margin-left: 190px;
+  background: #ffffff;
+  grid-row: 3;
+  grid-column: 1 / 2;
+  width: 150px;
+  outline: 0;
+  
+}
+ /*==============================label / input */
+input {
+  
+  height: 20px;
+  border-radius: 2px;
+  outline: 0;
+  border: 1px solid #222;
+  padding: 7px;
+  
+  
+  
+}
+label {
+ float: left;
+  
+}
+
+/*==================================card_col2*/
+
+.div_nome {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+ 
+}
+
+
+
+/*====================================div_cep*/
+.div_cep {
+  display: flex;
+  flex-direction: column;
+ 
+  
+}
+.l_cep {
+  display: flex;
+  margin-top: 19px;
+  margin-left: 20px;
+  
+}
+.cep { 
+  display: flex;
+  margin-left: 20px;
+  margin-top: 1px;
+  width: 100px;
+  
+  
+}
+/*=============================================div_end*/
+.div_end {
+  display: flex;
+  flex-direction: column; 
+ 
+}
+.l_end {
+  display: flex;
+  margin-top: -55px;
+  margin-left: 145px;
+ 
+
+}
+.end {
+  display: flex;
+  margin-top: 1px;
+  margin-left: 140px;  
+  width: 350px;
+ 
+}
+/*==========================================div.num*/
+
+.div_num {
+  display: flex;
+  flex-direction: column;  
+  
+ 
+}
+.l_num {
+  display: flex;
+  margin-top: -19px;
+  margin-left: 512px;  
+}
+.num {
+  display: flex;
+  margin-left: 510px;
+  width: 50px;
+  margin-top: -37px;
+  
+}
+/*==========================================div.comp*/
+.div_comp {
+  display: flex;
+  flex-direction: column; 
+  
+}
+.l_comp {  
+  display: block;
+  display: flex;
+  margin-top: -55px;
+  margin-left: 583px;
+}
+.comp {  
+  display: inline-block;
+  margin-top: px;
+  margin-left: 580px; 
+  width: 100px;
+  
+}
+
+/*==========================================div.bairro*/
+
+.div_bairro {
+  display: flex;
+  flex-direction: column;
+
+}
+.l_bairro {
+  display: block;
+  display: flex;
+  margin-top: -55px;
+  margin-left: 702px;
+}
+.bairro {
+  display: block;
+  display: flex;
+  margin-top: 0px;
+  margin-left: 700px;
+  width: 150px;
+  
+}
+
+/*==========================================div.cid */
+
+.div_cid {
+  display: flex;
+  flex-direction: column;
+  
+ 
+
+}
+.l_cid {
+  display: block;
+  display: flex;
+  margin-top: 10px;
+  margin-left: 20px;
+
+}
+.cid {
+  display: block;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-top: 1px;
+  width: 210px;
+  
+}
+
+/*==========================================div.est */
+
+.div_est {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  
+}
+.l_est {
+  display: block;
+  display: flex;
+  margin-top: -53px;
+  margin-left: 251px;
+
+}
+.est {
+  display: block;
+  display: flex;
+  margin-left: 251px;
+  margin-top: -1px;
+  width: 50px;
+}
+.booton_cadicli {
+  display: flex;
+  width: 193px;
+  height: 40px;
+  background: #222;
+  color: #e9941a;
+  border-radius: 5px;
+  margin-top: -68px;
+  margin-left: 75.5%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  grid-area: aside;
+  font-style: italic;
+  letter-spacing: 0.08rem;  
+  cursor: pointer;
+}
+
+.booton_cadicli:hover {
+  background-color: blue;
+  transform: translate(-3px);
+  color: #fff;
+}
+  
+
+/*===============================================================footer*/
+
+.footer_cadcli {
+  display: grid;
+  background: #222;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 300px;
+  margin-top: 45px;
+}

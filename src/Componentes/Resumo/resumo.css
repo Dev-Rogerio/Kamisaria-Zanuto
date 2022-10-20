@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+boby {
+    width: 100vw;
+    height: 100vh;
+}
+
+.containner-resumo {
+  display: grid;
+  max-width: 1920px;
+  background: #fff;
+  grid-template-columns: 40% 20% 40%;
+  grid-row-gap: 15px;
+  grid-column-gap: 7px;
+  padding: 30px;
+}
+
+.envelope_aside_resumo {
+  display: flex;
+  display: grid;
+  border: 1px solid #222;
+  border-radius: 5px;
+  grid-area: header;
+  padding: 10px;
+  
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+     "campo1 campo1 campo1"
+     "campo2 campo2 campo2"
+     "campo3 campo3 campo3"
+ ;
+ border: 1px solid #222;
+ background-color: #efefef;
+ grid-template-columns: 1/4;
+ grid-row-gap: 10px;
+ justify-content: center;
+ justify-items: center;
+ justify-self: center;
+ height: 470px;
+ width: 98.5%;
+ margin: 0 auto;
+ margin-top: 20px;
+ 
+ 
+ }
+.img-cola {
+    width: 33px;
+}
+
+.input_abotuadura {
+  width: 18px; 
+  margin-top: 57px;
+  
+  }
+  
+.input_chanfrado {
+  width: 18px; 
+  margin-top: 7px;
+  }
+  
+.input_botao {
+  width: 18px; 
+  margin-top: 30px;
+  }
+  
+.input_relogio {
+  width: 18px; 
+  margin-top: 25px;
+  }
+  
+.input_seta {
+  width: 18px; 
+  margin-top: 31px;
+  }
+  
+.input_quadrado {
+  width: 18px; 
+  margin-top: 25px;
+  }
+  
+.input_duplo {
+  width: 18px; 
+  margin-top: 54px;
+  }
+  
+  
+.input_redondo {
+  width: 18px; 
+  margin-top: 44px;
+  }
+
+
+
+  .resumo-footer {
+    margin-top: 71px;
+  }
+  .footer-resumo {
+    display: grid;
+    background: #222;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 300px;
+    grid-area: footer;
+    margin-top: 16px;
+    margin-top: 85px;
+    
+  }
+  
