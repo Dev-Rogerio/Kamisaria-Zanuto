@@ -7,7 +7,7 @@ function Contato () {
 return (
     <>
     <div>Deus è Fiél</div>
-    <div>Louvado seja Deus</div>
+   
     </>
 )
 }
