@@ -235,13 +235,15 @@ function Formulario() {
 
               <img className="med_col" id="figura" src={Maniquin}></img>
 
+              <div className="res"></div>
+
               <button onClick={Receber} className="booton_form">
                 {" "}
                 CONTINUAR{" "}
               </button>
             </section>
           </section>
-          <div className="res"></div>
+          
         </section>
 
         <div className="footer_form">

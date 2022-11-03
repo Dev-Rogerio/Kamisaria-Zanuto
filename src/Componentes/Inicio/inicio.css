@@ -46,6 +46,7 @@ boby {
 
 .itema {
   background: #fff;
+
 }
 
 .footer {
@@ -138,7 +139,7 @@ boby {
   text-align: center;
 }
 
-.rede {
+.rede_cad {
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row-start: 1;
@@ -228,4 +229,73 @@ boby {
 }
 .menu li:hover {
   border-radius: 5px;
+}
+@media screen and (max-width:700px){
+  .menu {
+    position: fixed;
+    top: 0;
+  }
+  .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  .logo {
+    margin-top: 30px;
+  }
+  .kz {
+    margin-top: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+    .foto_inicio {
+      width: 112%;
+      grid-area: unset;
+      
+      
+      
+    }
+    .containner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .nossatradicao {
+      padding: 20px;
+      font-size: 18px;
+      width: 100%;
+    
+    }
+    .texto {
+      font-size: 12px;
+    
+    }
+    .footer {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+      font-size: 12px;
+      padding: 20px;
+      
+    }
+    .nossoendereco {
+      margin: 25px;
+    }
+    .contato {
+      margin-top: 10px;
+      
+    }
+    .redesociais {
+      display: flex;      
+      position: absolute;
+      margin-top: 330px;
+      margin-left: 90px;
+    
+    }
+
+
+
 }

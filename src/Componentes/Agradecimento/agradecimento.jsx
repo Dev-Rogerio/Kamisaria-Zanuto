@@ -22,31 +22,30 @@ function Agradecimento() {
     <>
 
       <section className="containner_cadcli">
-        <header className="header_cadcli"></header>
-        <img src={Logo} alt="" className="logo_cadcli" />
-        <header className="kz_cadcli">KAMISARIA ZANUTO</header>
+      <section className="menu_form">
+          <img src={Logo} alt="" className="logo" />
+          <header className="kz">KAMISARIA ZANUTO</header>
 
-        <div className="menu_cadcli">
-          <ul>
-            <Link to="/">
-              <li>Inicio</li>
-            </Link>
-            <li>
-              vestuario
-              <ul>
-                <li>Camisa fem.</li>
-                <li>Camisa masc.</li>
-                <li>Maniq. Virtual</li>
-                <li>Monograma</li>
-                <li>Sapato</li>
-              </ul>
-            </li>
-            <li>Serviços</li>
-            <li>Contato</li>
-          </ul>
-        </div>
-
-
+          <div className="menu">
+            <ul>
+              <Link to="/">
+                <li>Inicio</li>
+              </Link>
+              <li>
+                vestuario
+                <ul>
+                  <li>Camisa fem.</li>
+                  <li>Camisa masc.</li>
+                  <li>Maniq. Virtual</li>
+                  <li>Monograma</li>
+                  <li>Sapato</li>
+                </ul>
+              </li>
+              <li>Serviços</li>
+              <li>Contato</li>
+            </ul>
+          </div>
+        </section>
         {/* =======================================================aside */}
 
 
@@ -56,7 +55,7 @@ function Agradecimento() {
 
         <div className="agradecer">Obrigado por chegar até aqui!</div>
                         
-          <div className="mode-agradecimento">" Em breve entraremos em contato para finalização de seu pedido. "</div>
+          <div className="mode-agradecimento">" Em breve entraremos em contato para finalizar o seu pedido. "</div>
          
         </section>
 
@@ -91,7 +90,7 @@ function Agradecimento() {
             </div>
           </div>
 
-          <div className="rede">
+          <div className="rede_cad">
             Rede Sociais
             <div className="rodape">
               {" "}

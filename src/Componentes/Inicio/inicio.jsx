@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 
+
 import "../Inicio/inicio.css";
 import Logo from "../Icons/logokz.svg";
 import Capa from "../Icons/fotoCapa.svg";
@@ -15,11 +16,14 @@ import itel from '../Icons/ctel.svg'
 import iwhats from '../Icons/cwhats.svg'
 import itwiter from '../Icons/twiter.svg'
 
-
 function Inicio() {
   return (
     <container>
       <section className="containner">
+
+
+
+        
         <img className="logo" src={Logo} alt="" />
         <header className="kz">KAMISARIA ZANUTO</header>
        
@@ -40,6 +44,12 @@ function Inicio() {
             <li>Contato</li>
           </ul>
         </div>
+        
+
+
+
+
+
         <img className="foto_inicio" src={Capa} alt="" />
         <div className="nossatradicao">
           NOSSA TRADIÇÂO
@@ -74,7 +84,7 @@ function Inicio() {
             </div>
           </div>
 
-          <div className="rede">Rede Sociais 
+          <div className="rede_cad">Rede Sociais 
             <div className="rodape"> <img className="ico" src={iinsta} alt="" />
             {" "} kamisaria Zanuto
               <div className="rodape"> <img className="ico" src={iface} alt="" />

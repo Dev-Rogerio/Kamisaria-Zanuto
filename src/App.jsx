@@ -9,6 +9,7 @@ import Modelo from '../src/Componentes/Modelo/modelo.jsx';
 import Resumo from '../src/Componentes/Resumo/resumo.jsx';
 import DescricaoColar from './Componentes/DescricaoColar/descricaoColar.jsx';
 import Agradecimento from './Componentes/Agradecimento/agradecimento.jsx';
+import Contato from '../src/Componentes/Contato/contato.jsx'
 import "./style.css";
 
 function App() {  
@@ -24,9 +25,11 @@ function App() {
           <Route path="/resumo" element={<Resumo/>}  />
           <Route path="/descricaocolar" element={<DescricaoColar/>} />
           <Route path="/agradecimento" element={<Agradecimento/>} />
+          <Route path="/contato" element={<Contato />} />
         </Routes>
       </Router>
     </div>
+   
   );
 }
 export default App;

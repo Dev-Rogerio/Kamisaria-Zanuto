@@ -49,7 +49,7 @@
 					"label": "INPUT-PUNHO"
 				},
 				{
-					"line": 243,
+					"line": 245,
 					"column": 10,
 					"label": "DIV-RES"
 				}
@@ -59,82 +59,17 @@
 			"path": "src/Componentes/Cadastro/cadcli.jsx",
 			"bookmarks": [
 				{
-					"line": 19,
-					"column": 0,
-					"label": "FUNCAO"
-				},
-				{
-					"line": 111,
-					"column": 4,
-					"label": "ELSE-CEP"
-				},
-				{
-					"line": 186,
-					"column": 14,
-					"label": "INPUT-NOME"
-				},
-				{
-					"line": 189,
-					"column": 14,
-					"label": "INPUT-SNOME"
-				},
-				{
 					"line": 192,
-					"column": 14,
-					"label": "INPUT-EMAIL"
-				},
-				{
-					"line": 195,
-					"column": 14,
-					"label": "INPUT-CELULAR"
-				},
-				{
-					"line": 198,
-					"column": 13,
-					"label": "INPUT-DATA"
-				},
-				{
-					"line": 209,
-					"column": 16,
-					"label": "INPUT-CEP"
-				},
-				{
-					"line": 214,
-					"column": 16,
-					"label": "INPUT-ENDERECO"
-				},
-				{
-					"line": 219,
-					"column": 16,
-					"label": "INPUT-NUMERO"
-				},
-				{
-					"line": 224,
-					"column": 16,
-					"label": "INPUT-COMPLEMNTO"
-				},
-				{
-					"line": 229,
-					"column": 16,
-					"label": "INPUT-BAIRRO"
-				},
-				{
-					"line": 234,
-					"column": 16,
-					"label": "INPUT-CIDADE"
-				},
-				{
-					"line": 239,
 					"column": 16,
 					"label": "INPUT-ESTADO"
 				},
 				{
-					"line": 243,
+					"line": 196,
 					"column": 14,
 					"label": "BUTTON"
 				},
 				{
-					"line": 249,
+					"line": 202,
 					"column": 8,
 					"label": "DIV-RES"
 				}
