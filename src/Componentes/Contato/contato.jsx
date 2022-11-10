@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+
 import Logo from "../Icons/logokz.svg";
 import "../Cadastro/cadcli.css";
 import Iinstagram from "../Icons/instagram.svg";
@@ -45,7 +46,10 @@ function Contato() {
                 <ul>
                   <li>Camisa fem.</li>
                   <li>Camisa masc.</li>
+                  <Link to="/cadcli">
                   <li>Maniq. Virtual</li>
+                  </Link>
+
                   <li>Monograma</li>
                   <li>Sapato</li>
                 </ul>
@@ -82,7 +86,7 @@ function Contato() {
 
               <div className="text-area">
                 <fieldset className="area-contato">
-                  <legend> > Mensagem </legend>
+                  <legend>  Mensagem </legend>
                   <div className="row">
                     <div className="col-12">
                       <textarea className="descricao" name="descricao" id="txtdescricao" cols="30" rows="5"></textarea>

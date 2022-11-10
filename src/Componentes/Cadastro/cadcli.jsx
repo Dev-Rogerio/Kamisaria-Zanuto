@@ -123,7 +123,9 @@ function Cadcli() {
               </ul>
             </li>
             <li>Serviços</li>
+            <Link to="/contato">
             <li>Contato</li>
+            </Link>
           </ul>
         </div>
 

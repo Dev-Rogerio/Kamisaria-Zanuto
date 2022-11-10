@@ -121,34 +121,41 @@
 
 .secaopai {
   width: 96%;
-  height: 287px;
-  background-color: #E9941A;
+  height: 289px;
+  background-color: #fff;
   grid-column: 1/4;
   grid-row: 1;
   margin-top: 230px;
+  border: 3px solid #222;
+  border-radius: 4px;
 }
 
 .direcionamento {
-  background-color: #45484b;
+  background-color: #eee7de;
   text-align: center;
   padding: 10px;
   margin: 5px;
-  color: #ffffff;
+  color: #222;
   text-transform: uppercase;
   font-family: sans-serif;
   letter-spacing: 0.2rem;
   font-size: 15px;
+  border: 2px solid rgb(99, 98, 98);
+  border-radius: 4px;
+  margin-left: 5px;
+  width: 97.6%;
 }
 
 .secaofilho {
   display: grid;
   display: flex;
-  background-color: #45484b;
+  background-color: #e2a550;
   width: 99.3%;
-  height: 66%;
+  height: 185px;
   margin: 5px;
   grid-column: 200px 800px;
-
+  border-radius: 4px;
+  
 }
 
 .lado-cliente {
@@ -157,6 +164,7 @@
   height: 94%;
   grid-column: 1;
   margin: 5px;
+  border-radius: 4px;
 }
 
 .lado-endereco {
@@ -165,6 +173,7 @@
   height: 94%;
   grid-column: 2;
   margin: 5px;
+  border-radius: 4px;
 }
 
 .dadoscliente {
@@ -172,6 +181,7 @@
   margin: 5px;
   text-align: center;
   padding: 10px;
+  border-radius: 4px;
 }
 
 .dadosendereco {
@@ -179,6 +189,7 @@
   margin: 5px;
   text-align: center;
   padding: 10px;
+  border-radius: 4px;
 }
 
 .l_nome {
@@ -365,7 +376,7 @@
 
 .res_cli {
   display: flex;
-  background-color: #e9e6e6;
+  background-color: #eee7de;
   height: 40px;
   color: red;
   margin-left: 5px;
@@ -379,7 +390,8 @@
   text-transform: uppercase;
   animation: piscaPisca 1.5s infinite;
   font-weight: 600;
-
+  margin-top: 1px;
+  border: 1px solid #222;
 }
 
 @keyframes piscaPisca {
@@ -406,7 +418,7 @@
   background: #48484b;
   color: #ffffff;
   border-radius: 5px;
-  margin-top: 0px;
+  margin-top: 1px;
   /* margin-left: 75.5%; */
   justify-content: center;
   align-items: center;

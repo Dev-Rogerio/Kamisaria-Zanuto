@@ -59,17 +59,17 @@
 			"path": "src/Componentes/Cadastro/cadcli.jsx",
 			"bookmarks": [
 				{
-					"line": 192,
+					"line": 194,
 					"column": 16,
 					"label": "INPUT-ESTADO"
 				},
 				{
-					"line": 196,
+					"line": 198,
 					"column": 14,
 					"label": "BUTTON"
 				},
 				{
-					"line": 202,
+					"line": 204,
 					"column": 8,
 					"label": "DIV-RES"
 				}
