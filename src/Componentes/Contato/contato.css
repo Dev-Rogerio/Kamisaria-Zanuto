@@ -1,7 +1,163 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-div {
-    font-size: 70px;
+
+.header_contato {}
+
+.main_contato {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-gap: 25px;
+    margin: 5px;
+   
+}
+
+.foto_contato {
+
+    grid-column: 1/2;
+    /* border: 1px solid #222; */
+    height: 430px;
+}
+.telefonista {
+    width: 102%;
+   
+}
+
+.formulario_contato {
+
+    grid-column: 2/3;
+    /* border: 1px solid #4b4b4b; */
+    height: 430px;
+    background-color: #ccc;
+}
+
+.h1_contato {
+    background-color: #E9941A;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 0.15rem;
+    font-style: italic;
+    color: #fff;
+    margin: 5px;
+}
+
+.container-contato {
+    display: grid;
+    justify-items: center;
+    margin-top: 10px;
+    height: 350px;
+}
+
+/* ----------------------------------------------------- */
+
+.nome_contato {
+    height: 50px;
+    width: 50%;
+    padding: 5px;
+}
+
+.l_nome-contato {
+    display: block;   
+    font-family: sans-serif;   
+    font-size: 13px;
+}
+
+.in_nome-contao {
+    width: 97%;
+    padding: 6px;
+    outline: 0;
+    border: 1px solid #222;
+    border-radius: 2px;
+
+}
+
+.use_contaato {
+    position: absolute;
+    width: 20px;
+    margin-left: -30px;
+    margin-top: 18px;
+
+}
+
+/* ------------------------------------------------ */
+.email_contato {
+    height: 50px;
+    width: 50%;
+    margin-bottom: 200px;
+    margin-top: -35px;
+}
+
+.l_email-contato {
+    display: block;   
+    font-family: sans-serif;   
+    font-size: 13px;
+}
+
+.in_email-contato {
+    width: 97%;
+    padding: 6px;
+    outline: 0;
+    border: 1px solid #222;
+    border-radius: 2px;
+}
+
+.img_email-contato {
+    display: flex;
+    position: absolute;
+    width: 20px;
+    margin-left: -29px;
+    margin-top: 24px;
+    
+}
+
+
+/* ------------------------------------------------ */
+
+.text-area {
+    position: absolute;
+    margin: 0;
+    margin-top: 150px;
+}
+.area-contato {
+    width: 700px;
+    height: 130px;
+    border: 1px solid #222;
+    margin-top: -5px;
+    background-color: #fff;
+}
+
+legend {
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    font-size: 13px;
+     font-style: italic;
+}
+.descricao {
+    width: 97.6%;
+    height: 105px;
+    margin: 10px;
+    outline: 0;
+    border: none;
+    font-size: 15px;
+    text-align: left;
+    background-color: #fff;
+   
+}
+.button_contato {
+    width: 20%;
+    height: 40px;
+    background: #48484b;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 75.5%;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.08rem;
+    cursor: pointer;
 }

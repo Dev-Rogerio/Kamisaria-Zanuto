@@ -367,17 +367,18 @@
   display: flex;
   background-color: #e9e6e6;
   height: 40px;
-  color: #e32f21;
+  color: red;
   margin-left: 5px;
   width: 1157px;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
+  font-size: 13px;
   letter-spacing: 0.2em;
   font-family: sans-serif;
   text-transform: uppercase;
   animation: piscaPisca 1.5s infinite;
+  font-weight: 600;
 
 }
 

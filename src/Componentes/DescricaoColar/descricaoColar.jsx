@@ -65,7 +65,7 @@ function DescricaoColar() {
             </div>
           </div>
 
-          <div className="descricao">
+          <div className="descricao-colar">
             <h1 className="h1-desc">Descrição do colarinho</h1>
             <p className="desc-ingles">
               Esse tipo de colarinho se caracteriza pelas pontas mais

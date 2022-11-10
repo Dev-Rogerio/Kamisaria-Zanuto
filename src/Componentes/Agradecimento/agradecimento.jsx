@@ -42,7 +42,7 @@ function Agradecimento() {
                 </ul>
               </li>
               <li>Serviços</li>
-              <li>Contato</li>
+              <Link to='/contato'><li>Contato</li></Link>
             </ul>
           </div>
         </section>
