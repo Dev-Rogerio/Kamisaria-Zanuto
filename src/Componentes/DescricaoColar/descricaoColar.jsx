@@ -17,7 +17,9 @@ import itwiter from "../Icons/twiter.svg";
 import "../DescricaoColar/descricaoColar.css";
 
 function DescricaoColar() {
+
   var Zoom = localStorage.getItem("figura");
+  //img.style.transform = 'scale(2)';
 
   
   
@@ -54,7 +56,7 @@ function DescricaoColar() {
             <div className="zoom">
             <img
               id="fig"
-              className="zoom"
+              className="zoon"
               src={Zoom}
               alt=""
               width="400px"
@@ -63,7 +65,7 @@ function DescricaoColar() {
             </div>
           </div>
 
-          <div className="descricao">
+          <div className="descricao-colar">
             <h1 className="h1-desc">Descrição do colarinho</h1>
             <p className="desc-ingles">
               Esse tipo de colarinho se caracteriza pelas pontas mais
@@ -78,8 +80,7 @@ function DescricaoColar() {
           </div>
         </section>
 
-        <div className="res"></div>
-
+        
         <div className="footer-descricao">
           <div className="nossoendereco">
             Nosso Endereço
@@ -108,7 +109,7 @@ function DescricaoColar() {
             </div>
           </div>
 
-          <div className="rede">
+          <div className="rede_cad">
             Rede Sociais
             <div className="rodape">
               {" "}

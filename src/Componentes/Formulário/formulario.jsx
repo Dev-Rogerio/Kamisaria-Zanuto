@@ -40,25 +40,25 @@ function Formulario() {
       res.innerHTML = " Preencha os campos em branco";
       document.querySelector(".colar").focus();
     } else if (pal.value == "") {
-      res.innerHTML = "qual a medida da pala";
+      res.innerHTML = "Qual a medida da pala";
       document.querySelector(".pala").focus();
     } else if (man.value == "") {
-      res.innerHTML = "qual a medida da manga";
+      res.innerHTML = "Qual a medida da manga";
       document.querySelector(".manga").focus();
     } else if (tor.value == "") {
-      res.innerHTML = "qual a medida do torax";
+      res.innerHTML = "Qual a medida do torax";
       document.querySelector(".torax").focus();
     } else if (cin.value == "") {
-      res.innerHTML = "qual a medida da cintura";
+      res.innerHTML = "Qual a medida da cintura";
       document.querySelector(".cintura").focus();
     } else if (qua.value == "") {
-      res.innerHTML = "qual a medida do quadril";
+      res.innerHTML = "Qual a medida do quadril";
       document.querySelector(".quadril").focus();
     } else if (cum.value == "") {
-      res.innerHTML = "qual a medida do cumprimento";
+      res.innerHTML = "Qual a medida do cumprimento";
       document.querySelector(".cumprimento").focus();
     } else if (pun.value == "") {
-      res.innerHTML = "qual a medidaas do punho";
+      res.innerHTML = "Qual a medidaas do punho";
       document.querySelector(".punho").focus();
     } else {
       window.location.href = "http://localhost:3000/modelo";
@@ -235,13 +235,15 @@ function Formulario() {
 
               <img className="med_col" id="figura" src={Maniquin}></img>
 
+              <div className="res"></div>
+
               <button onClick={Receber} className="booton_form">
                 {" "}
                 CONTINUAR{" "}
               </button>
             </section>
           </section>
-          <div className="res"></div>
+          
         </section>
 
         <div className="footer_form">

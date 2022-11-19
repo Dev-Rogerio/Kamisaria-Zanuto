@@ -291,7 +291,7 @@ function modelo() {
             </div>
           </div>
 
-          <div className="rede">
+          <div className="rede_cad">
             Rede Sociais
             <div className="rodape">
               {" "}

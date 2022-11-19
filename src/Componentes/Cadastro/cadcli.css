@@ -1,65 +1,72 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-* {
-  padding: 0;
-  margin: 0;
-}
 
-.containner_cadcli {
-  display: grid;
-  grid-template-columns: 1fr  25% 1fr;
-  grid-template-rows: auto 450px auto;
-  grid-template-areas:
-      "header header header"
-      "aside aside aside"
-      "footer footer footer" 
-
-  ;
-  grid-gap: 5px;
-  padding: 5px;
-}
 
 
 /*========================================HEADER */
 
+.corpo {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "nav1 nav2 nav3"
+  ;
+  justify-items: center;
+
+}
+
 .header_cadcli {
   display: grid;
-  display: flex;
-  grid-area: header;
-  background-color: #fff;
-  grid-column: 1/ 4;
- 
-}
-.logo_cadcli {
-  display: flex;
-  grid-area: header;
-  grid-column: 2/3;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column: 1/4;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "first1 first2 first3"
+    "secund1 secund2 secund3"
+  ;
+  justify-self: center;
+  width: 700px;
+  height: 180px;
+  padding: 20px;
+  margin-top: 20px;
   grid-row: 1;
+
+
+}
+
+.logo_cadcli {
+  grid-area: first2;
+  justify-self: center;
   width: 130px;
   height: 170px;
-  justify-self: center;
-  
+  grid-row: 1;
 }
-.kz_cadcli {  
-  grid-area: header;
-  grid-column: 2;
+
+.kz_cadcli {
   margin-top: 150px;
+  grid-area: first2;
+  grid-row: 1;
   text-align: center;
-  padding: 5px;
   font-size: 1.4rem;
   font-family: "Times New Roman", Times, serif;
-  background-color: #fff;
- 
-  
+  width: 250px;
+  height: 30px;
+  padding: 0;
 }
 
 /*========================================ul > li */
 
 .menu_cadcli {
   display: flex;
-  grid-area: header;
   grid-column: 3/4;
   align-items: center;
-  margin-top: -75px;
+  padding: 10px;
+  margin: auto;
+  grid-area: first1 first2 first3;
+  grid-row: 1/2;
+  margin-top: 50px;
+  margin-right: 30px;
 }
 
 .menu_cadcli ul {
@@ -70,7 +77,7 @@
   width: 100%;
   display: flex;
   gap: 10px;
-  align-items: center;  
+  align-items: center;
 }
 
 .menu_cadcli ul li {
@@ -94,431 +101,346 @@
   background-color: #222;
   color: #e9941a;
 }
+
 .menu_cadcli ul ul {
   display: none;
 }
-.menu_cadcli ul li:hover > ul {
+
+.menu_cadcli ul li:hover>ul {
   display: block;
   margin-top: 1px;
 }
+
 .menu_cadcli ul ul li:hover {
   background-color: #e9941a;
   color: #000;
-  font-size: 10px;  
+  font-size: 10px;
+}
+
+/* ======================================================seçao Pai */
+
+.secaopai {
+  width: 96%;
+  height: 289px;
+  background-color: #fff;
+  grid-column: 1/4;
+  grid-row: 1;
+  margin-top: 230px;
+  border: 3px solid #222;
+  border-radius: 4px;
+}
+
+.direcionamento {
+  background-color: #eee7de;
+  text-align: center;
+  padding: 10px;
+  margin: 5px;
+  color: #222;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 15px;
+  border: 2px solid rgb(99, 98, 98);
+  border-radius: 4px;
+  margin-left: 5px;
+  width: 97.6%;
+}
+
+.secaofilho {
+  display: grid;
+  display: flex;
+  background-color: #e2a550;
+  width: 99.3%;
+  height: 185px;
+  margin: 5px;
+  grid-column: 200px 800px;
+  border-radius: 4px;
+  
+}
+
+.lado-cliente {
+  background-color: #ffffff;
+  width: 100%;
+  height: 94%;
+  grid-column: 1;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.lado-endereco {
+  background-color: #ffffff;
+  width: 100%;
+  height: 94%;
+  grid-column: 2;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.dadoscliente {
+  background-color: hsl(180, 1%, 65%);
+  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.dadosendereco {
+  background-color: hsl(180, 1%, 65%);
+  margin: 5px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.l_nome {
+  display: flex;
+  margin-top: 18px;
+  margin-left: 5px;
+  color: #ffffff;
+}
+
+.nome {
+  display: block;
+  width: 110px;
+  outline: 0;
+  padding: 2px;
+  margin-left: 5px;
+  border-radius: 3px;
+}
+
+.l_snome {
+  display: flex;
+  margin-left: 130px;
+  margin-top: -43.5px;
+}
+
+.snome {
+  display: block;
+  margin-left: 130px;
+  outline: 0;
+  padding: 2px;
+  width: 232px;
+  border-radius: 3px;
+}
+
+.l_email {
+  display: flex;
+  margin-left: 377px;
+  margin-top: -43.5px;
+}
+
+.email {
+  display: block;
+  margin-left: 377px;
+  outline: 0;
+  padding: 2px;
+  width: 330px;
+  border-radius: 3px;
+
+}
+
+.l_cel {
+  display: flex;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.cel {
+  display: block;
+  margin-left: 5px;
+  outline: 0;
+  padding: 2px;
+  width: 130px;
+  border-radius: 2px;
+}
+
+.l_data {
+  display: flex;
+  margin-left: 150px;
+  margin-top: -43px;
+}
+
+.data {
+  display: block;
+  margin-left: 150px;
+  outline: 0;
+  padding: 2px;
+  width: 130px;
+  border-radius: 2px;
+}
+
+.l_cep {
+  display: flex;
+  margin-left: 5px;
+  margin-top: 18px;
+}
+
+.cep {
+  display: block;
+  margin-left: 5px;
+  outline: 0;
+  padding: 2px;
+  width: 130px;
+  border-radius: 2px;
+}
+
+.l_end {
+  display: flex;
+  margin-left: 150px;
+  margin-top: -43px;
+}
+
+.end {
+  display: block;
+  margin-left: 150px;
+  outline: 0;
+  padding: 2px;
+  width: 353px;
+  border-radius: 2px;
+}
+
+.l_num {
+  display: flex;
+  margin-left: 518px;
+  margin-top: -43px;
+}
+
+.num {
+  display: block;
+  margin-left: 518px;
+  outline: 0;
+  padding: 2px;
+  width: 55px;
+  border-radius: 2px;
+}
+
+.l_comp {
+  display: flex;
+  margin-left: 588px;
+  margin-top: -43px;
+}
+
+.comp {
+  display: block;
+  margin-left: 588px;
+  outline: 0;
+  padding: 2px;
+  width: 118px;
+  border-radius: 2px;
+}
+
+.l_bairro {
+  display: flex;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.bairro {
+  display: block;
+  margin-left: 5px;
+  outline: 0;
+  padding: 2px;
+  width: 220px;
+  border-radius: 2px;
+}
+
+.l_cid {
+  display: flex;
+  margin-left: 235px;
+  margin-top: -43px;
+}
+
+.cid {
+  display: block;
+  margin-left: 238px;
+  outline: 0;
+  padding: 2px;
+  width: 250px;
+  border-radius: 2px;
+}
+
+.l_est {
+  display: flex;
+  margin-left: 500px;
+  margin-top: -43px;
+}
+
+.est {
+  display: block;
+  margin-left: 500px;
+  outline: 0;
+  padding: 2px;
+  width: 60px;
+  border-radius: 2px;
+}
+
+.res_cli {
+  display: flex;
+  background-color: #eee7de;
+  height: 40px;
+  color: red;
+  margin-left: 5px;
+  width: 1157px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  animation: piscaPisca 1.5s infinite;
+  font-weight: 600;
+  margin-top: 1px;
+  border: 1px solid #222;
+}
+
+@keyframes piscaPisca {
+  20% {
+    color: #e32f21;
+  }
+
+  10% {
+    color: #fff;
+  }
+}
+
+.resposta {
+  display: flex;
+  height: 40px;
+  grid-gap: 10px;
+
+
+}
+
+.button_continuar {
+  width: 20%;
+  height: 40px;
+  background: #48484b;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 1px;
+  /* margin-left: 75.5%; */
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+
+}
+
+.button_continuar:hover {
+  background-color: rgb(46, 44, 44);
+  transform: translate(-3px);
+  color: #ffffff;
+
 }
 
 
 /*===========================================================AASIDE*/
 
 
-
-.card_cadcli {  
-  display: flex;
-  display: grid;
-  grid-template-columns: 48% 52%;
-  margin-top: 20px;
-  grid-column: 1 / 4;
-  padding: 50px;
-  grid-template-areas: "main" "main"; 
-  height: 320px;
-  border: 2px solid  #222;
-  grid-gap: 15px;
-  background-color: #fff;
-  justify-content: center;
-  align-content: center;
-  margin-top: 50px;
-  justify-items: center;
-  
-  
-  
-  
-}
-.card_pessoais {
-  text-align: center;
-  background: rgb(117, 116, 116);
-  padding: 5px;  
-  border-radius: 5px 5px 0px 0px;
-  grid-column: 1/2;
-  height: 45px;
-  /* width: 98.8%; */
-  margin: 0;
- 
-}
-.card_resid {
-  background: rgb(117, 116, 116);
-  grid-row: 2;
-  grid-column: 2/4;
-  /* padding: 5px; */
-  border-radius: 5px 5px 0px 0px;
-  text-align: center;
-  height: 45px;
-  width: 99%;
-  padding: 5px;
- 
-}
-/*==================================card_col1 */
-.bloco_pessoal {
-  display: grid;  
- 
-}
-.card_dados {
-  display: flex;
-  background: rgb(117, 116, 116);
-  padding: 25px;
-  color: #ccc;
-  text-transform: uppercase;
-  font-weight: bolder ;
-  grid-column: 1 / 4;
-  text-align: center;
-  height: 25px;
-  width: 94.6%;
-  border-radius: 5px;
-  /* border: 2px solid #222; */
-  justify-content: center;
-  font-size: 1.5rem;
-  border: 1px solid #e9941a;
-  
-}
-
-.card_col1 { 
- 
-  background: #ccc;
-  grid-column: 1 / 2;
-  grid-area: main;
-  grid-row: 2;
-  width: 100%;
-  justify-content: center;
-  margin-left: 54px;
-  border-radius: 5px;
-  border: 1px solid #e9941a;
-  height: 210px;
-  
- 
-}
-.card_col2 {
-  background: #ccc;
-  grid-column: 2 / 4;
-  width: 94.3%;
-  justify-content: center;
-  border-radius: 5px;
-  border: 1px solid #e9941a;
-  height: 210px;
-  
- 
-}
-
-.l_nome {
-  display: block;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 20px;
-  grid-row: 1;
-  grid-column: 1/3;  
- 
-}
-.nome { 
-  display: block;
-  display: flex;
-  margin-left: 20px;
-  grid-row: 2;
-  grid-column: 1/3;
-  background: #ffffff;
-  width: 150px;
-  outline: 0;
-  
-}
-.l_snome {
-  display: block;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 190px;
-  grid-row: 1;
-  grid-column: 1 / 2;
-  
-
-}
-.snome {
-  display: block;
-  display: flex;  
-  outline: 0;
-  grid-column: 1/3;
-  margin-left: 190px;
-  grid-row: 2;
-  width: 250px;
-  background: #ffffff;
- 
-
-}
-.l_email {
-  display: block;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 459px;
-  grid-column: 1 / 3;
-  grid-row: 1;
-  
-}
-.email {
-  display: block;
-  display: flex; 
-  grid-row: 2;
-  margin-left: 459px;
-  width: 360px;
-  background: #ffffff;
-  grid-column: 1 /3;
-  outline: 0;
-
-
-}
-.l_cel {
-  display: block;
-  display: flex;
-  margin-top: 10px;
-  grid-row: 3;
-  margin-left: 20px;
-  grid-column: 1 / 3;
- 
-
-}
-.cel {
-  display: block;
-  display: flex;
-  margin-top: 29px;
-  margin-left: 20px;
-  background: #ffffff;
-  grid-row: 3;
-  grid-column: 1 / 2;
-  width: 150px;
-  outline: 0;
-  
-
-}
-.l_data {
-  display: block;
-  display: flex;
-  margin-top: 10px;
-  grid-row: 3;
-  margin-left: 190px;
-  grid-column: 1 / 3;
- 
-}
-.data { 
-  display: block;
-  display: flex;
-  margin-top: 29px;
-  margin-left: 190px;
-  background: #ffffff;
-  grid-row: 3;
-  grid-column: 1 / 2;
-  width: 150px;
-  outline: 0;
-  
-}
- /*==============================label / input */
-input {
-  
-  height: 20px;
-  border-radius: 2px;
-  outline: 0;
-  border: 1px solid #222;
-  padding: 7px;
-  
-  
-  
-}
-label {
- float: left;
-  
-}
-
-/*==================================card_col2*/
-
-.div_nome {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
- 
-}
-
-
-
-/*====================================div_cep*/
-.div_cep {
-  display: flex;
-  flex-direction: column;
- 
-  
-}
-.l_cep {
-  display: flex;
-  margin-top: 19px;
-  margin-left: 20px;
-  
-}
-.cep { 
-  display: flex;
-  margin-left: 20px;
-  margin-top: 1px;
-  width: 100px;
-  
-  
-}
-/*=============================================div_end*/
-.div_end {
-  display: flex;
-  flex-direction: column; 
- 
-}
-.l_end {
-  display: flex;
-  margin-top: -55px;
-  margin-left: 145px;
- 
-
-}
-.end {
-  display: flex;
-  margin-top: 1px;
-  margin-left: 140px;  
-  width: 350px;
- 
-}
-/*==========================================div.num*/
-
-.div_num {
-  display: flex;
-  flex-direction: column;  
-  
- 
-}
-.l_num {
-  display: flex;
-  margin-top: -19px;
-  margin-left: 512px;  
-}
-.num {
-  display: flex;
-  margin-left: 510px;
-  width: 50px;
-  margin-top: -37px;
-  
-}
-/*==========================================div.comp*/
-.div_comp {
-  display: flex;
-  flex-direction: column; 
-  
-}
-.l_comp {  
-  display: block;
-  display: flex;
-  margin-top: -55px;
-  margin-left: 583px;
-}
-.comp {  
-  display: inline-block;
-  margin-top: px;
-  margin-left: 580px; 
-  width: 100px;
-  
-}
-
-/*==========================================div.bairro*/
-
-.div_bairro {
-  display: flex;
-  flex-direction: column;
-
-}
-.l_bairro {
-  display: block;
-  display: flex;
-  margin-top: -55px;
-  margin-left: 702px;
-}
-.bairro {
-  display: block;
-  display: flex;
-  margin-top: 0px;
-  margin-left: 700px;
-  width: 150px;
-  
-}
-
-/*==========================================div.cid */
-
-.div_cid {
-  display: flex;
-  flex-direction: column;
-  
- 
-
-}
-.l_cid {
-  display: block;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 20px;
-
-}
-.cid {
-  display: block;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-top: 1px;
-  width: 210px;
-  
-}
-
-/*==========================================div.est */
-
-.div_est {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 30px;
-  
-}
-.l_est {
-  display: block;
-  display: flex;
-  margin-top: -53px;
-  margin-left: 251px;
-
-}
-.est {
-  display: block;
-  display: flex;
-  margin-left: 251px;
-  margin-top: -1px;
-  width: 50px;
-}
-.booton_cadicli {
-  display: flex;
-  width: 193px;
-  height: 40px;
-  background: #222;
-  color: #e9941a;
-  border-radius: 5px;
-  margin-top: -68px;
-  margin-left: 75.5%;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
-  grid-area: aside;
-  font-style: italic;
-  letter-spacing: 0.08rem;  
-  cursor: pointer;
-}
-
-.booton_cadicli:hover {
-  background-color: blue;
-  transform: translate(-3px);
-  color: #fff;
-}
-  
-
-/*===============================================================footer*/
+/*========================================footer*/
 
 .footer_cadcli {
   display: grid;
@@ -527,5 +449,240 @@ label {
   grid-column-start: 1;
   grid-column-end: 4;
   height: 300px;
-  margin-top: 45px;
+  margin-top: 10px;
+  width: 100%;
+}
+.redesociais_cad {
+  justify-self: center;
+  grid-column: 1/4;
+  margin-top: -230px;
+}
+
+/* -----------------------------------------------------------------------------------------------------@media Query */
+@media screen and (max-width: 700px) {
+
+
+  .menu_cadcli {
+    display: flex;
+    grid-column: 1/4;
+    top: 0;
+    justify-content: center;
+    margin-left: 30px;
+  }
+
+  .menu_cadcli ul {
+    display: flex;
+    flex-wrap: wrap;
+    grid-column: 1/4;
+    grid-row: 1;
+    justify-self: center;
+  }
+
+  .logo_cadcli {
+    display: flex;
+    grid-column: 2;
+    margin-top: 120px;
+    grid-area: first2;
+    justify-self: center;
+
+  }
+
+  .kz_cadcli {
+    display: flex;
+    height: 25px;
+    width: 255px;
+    margin-top: 300px;
+    font-size: 25px;
+    grid-column: 1/4;
+    justify-self: center;
+
+  }
+
+  .secaopai {
+    margin-top: 500px;
+  }
+
+  .lado-endereco {
+    display: block;
+    margin-top: 650px;
+    margin-left: 10px;
+    grid-column: first2;
+  }
+
+
+  .footer_cadcli {
+    margin-top: 740px;
+    grid-column: 1/4;
+  }
+/* ---------------------------------------------------------------secaopai */
+
+.secaopai {
+  display: flex;  
+  margin-top: 450px;
+  height: 450px;
+}
+.direcionamento {
+  position: absolute;
+  display: flex;
+  margin-top: -70px;
+  grid-column: 1/4;
+  height: 40px;
+  width: 190%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+ 
+}
+.secaofilho { 
+  grid-column: 1/4;
+  width: 98%; 
+  height: 385px;
+}
+.email {
+  width: 280px;
+}
+.lado-cliente {
+  height: 180px ;
+}
+.lado-endereco {
+  display: flex;
+  position: absolute;
+  margin-top: 195px;
+  grid-column: 1/4; 
+  width: 191%;
+  margin-left: 5px;
+  height: 180px;
+}
+.dadosendereco {
+  display: flex;
+  grid-column: 1/4;
+  position: absolute;
+  margin-top: 5px;
+  width: 95.7%;
+  text-align: center;
+  justify-content: center;
+}
+.resposta {
+  display: flex;
+  position: absolute;
+  margin-top: 400px;
+}
+.res_cli {
+  width: 580px;
+  margin-left: 10px;
+  grid-column: 1/4;
+
+}
+.l_cep {
+  position: absolute;
+  display: flex; 
+  margin-top: 65px;
+}
+.cep { 
+  position: absolute;
+  display: flex;
+  margin-top: 85px;
+}
+.l_end {
+  position: absolute;
+  display: flex;
+  margin-top: 65px;
+}
+.end {
+  position: absolute;
+  display: flex;
+  margin-top: 85px; 
+}
+.l_num {
+  position: absolute;
+  display: flex;
+  margin-top: 65px;
+
+}
+.l_comp {
+  position: absolute;
+  display: flex;
+  margin-top: 65px;  
+}
+.comp {
+  position: absolute;
+  display: flex;
+  margin-top: 85px;
+  width: 78px;
+}
+.num {
+  position: absolute;
+  display: flex;
+  margin-top: 85px;
+}
+.l_bairro {
+  position: absolute;
+  display: block;
+  margin-top: 125px;
+
+}
+.bairro {
+  position: absolute;
+  display: block;
+  margin-top: 143px;
+  
+}
+.l_est {
+  position: absolute;
+  display: flex;
+  margin-top: 125px;
+}
+.est {
+  position: absolute;
+  display: flex;
+  margin-top: 143px;
+}
+
+.l_cid {
+  position: absolute;
+  display: block;
+  margin-top: 125px;
+}
+.cid {
+  position: absolute;
+  display: block;
+  margin-top: 143px;
+}
+/* --------------------------------------------------------------------------------footer */
+.footer_cadcli {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  width: 97%;
+  font-size: 12px;
+  padding: 20px;
+  margin-top: 5px;
+  
+}
+.nossoendereco {
+  margin: 25px;
+}
+.contato {
+  margin-top: 10px;
+  
+}
+.redesociais_cad {
+  display: flex;      
+  position: absolute;
+  margin-top: 335px;
+  margin-left: 80%;
+ 
+}
+.rede_cad. {
+  float:inline-end;
+  display: block;
+  margin-left: 40%;
+  margin-top: 4px;
+  z-index: 1;
+  font-size: 25px;
+  color: #E9941A;
+  font-style: italic;
+}
+
 }

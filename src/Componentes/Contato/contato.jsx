@@ -2,6 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+
 import Logo from "../Icons/logokz.svg";
 import "../Cadastro/cadcli.css";
 import Iinstagram from "../Icons/instagram.svg";
@@ -14,15 +15,24 @@ import iinsta from "../Icons/cinsta.svg";
 import itel from "../Icons/ctel.svg";
 import iwhats from "../Icons/cwhats.svg";
 import itwiter from "../Icons/twiter.svg";
+import Use from "../Icons/use-contato.png";
+import Email from '../Icons/email-contato.png';
+import Telefonista from '../Icons/telefonista.jpg'
 
-import "../Agradecimento/agradecimento.css";
+import "../Contato/contato.css";
 
-function Agradecimento() {
+function Contato() {
+  function enviar() {
+
+    var area = document.querySelector(".mensagemdousuario");
+    var nome = document.querySelector(".in_nome-contao");
+    var email = document.querySelector(".in_email-conato");
+    var res = document.querySelector('.res_contato');
+  }
   return (
     <>
-
-      <section className="containner_cadcli">
-      <section className="menu_form">
+      <section>
+        <section className="menu_form">
           <img src={Logo} alt="" className="logo" />
           <header className="kz">KAMISARIA ZANUTO</header>
 
@@ -36,33 +46,62 @@ function Agradecimento() {
                 <ul>
                   <li>Camisa fem.</li>
                   <li>Camisa masc.</li>
+                  <Link to="/cadcli">
                   <li>Maniq. Virtual</li>
+                  </Link>
+
                   <li>Monograma</li>
                   <li>Sapato</li>
                 </ul>
               </li>
               <li>Serviços</li>
-              <Link to='/contato'><li>Contato</li></Link>
+              <li>Contato</li>
             </ul>
           </div>
         </section>
-        {/* =======================================================aside */}
 
+        <main className="main_contato">
+          <section className="foto_contato">
+            <img className="telefonista" src={Telefonista} alt="" />
+          </section>
+          <section className="formulario_contato">
+            <h1 className="h1_contato">Entre em contato conosco</h1>
 
-        
+            <section className="container-contato">
+              <div className="nome_contato">
+                <img className="use_contaato" src={Use} alt="" />
+                <label htmlFor="" className="l_nome-contato">
+                  Nome:
+                </label>
+                <input type="text" className="in_nome-contao" placeholder="Digite seu nome" />
+              </div>
 
-        <section className="aside-agradecimento">
+              <div className="email_contato">
+              <img className="img_email-contato" src={Email} alt="" />
+                <label htmlFor="" className="l_email-contato">
+                  E-mail:
+                </label>               
+                <input type="text" className="in_email-contato" placeholder="Digite seu e-mail" />
+              </div>
 
-        <div className="agradecer">Obrigado por chegar até aqui!</div>
-                        
-          <div className="mode-agradecimento">" Em breve entraremos em contato para finalizar o seu pedido. "</div>
-         
-        </section>
+              <div className="text-area">
+                <fieldset className="area-contato">
+                  <legend>  Mensagem </legend>
+                  <div className="row">
+                    <div className="col-12">
+                      <textarea className="descricao" name="descricao" id="txtdescricao" cols="30" rows="5"></textarea>
+                    </div>
 
+                  </div>
 
-        {/* =======================================================aside */}
+                </fieldset>
+                <button className="button_contato" >Enviar</button>
+              </div>
+            </section>
+          </section>
+        </main>
 
-        <div className="footer-descricao">
+        <div className="footer_cadcli">
           <div className="nossoendereco">
             Nosso Endereço
             <div className="rodape">
@@ -74,6 +113,7 @@ function Agradecimento() {
             </div>
           </div>
 
+          
           <div className="contato">
             Contato
             <div className="rodape">
@@ -105,7 +145,7 @@ function Agradecimento() {
             </div>
           </div>
 
-          <div className="redesociais">
+          <div className="redesociais_cad">
             <img className="instagram" src={Iinstagram} alt="" />
             <img className="facebook" src={Ifacebook} alt="" />
             <img className="pinterest" src={Ipinterest} alt="" />
@@ -116,4 +156,4 @@ function Agradecimento() {
     </>
   );
 }
-export default Agradecimento;
+export default Contato;

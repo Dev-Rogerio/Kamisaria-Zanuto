@@ -17,7 +17,6 @@ import itwiter from "../Icons/twiter.svg";
 
 function Cadcli() {
   function cadcli(e) {
- 
     var nome = window.document.querySelector(".nome");
     var snome = window.document.querySelector(".snome");
     var email = window.document.querySelector(".email");
@@ -27,102 +26,86 @@ function Cadcli() {
     var end = window.document.querySelector(".end");
     var num = window.document.querySelector(".num");
     var comp = window.document.querySelector(".comp");
-    var bar = window.document.querySelector(".bairro");
+    var bairro = window.document.querySelector(".bairro");
     var cid = window.document.querySelector(".cid");
     var est = window.document.querySelector(".est");
-    var res = window.document.querySelector(".res");
+    var res = window.document.querySelector(".res_cli");
 
-    var caractere = true;
+    // function validarNome(nome) {
+    //   const isNome = nome.includes('i') && nome.includes('e')
+    //   return isNome;
+    // }
 
+    // ====================email.indexOOf('@')==============================================
 
+    function validarEmail(email) {
+      const isValid = email.includes("@") && email.includes(".");
 
-
-  if(email.value == ''){
-    res.textContent ='Preencher os campos corretamente'
-  } else {
-    console.log(email.value)
-  }
-
-    
-   email.addEventListener('keyup', () => {
-    if(validarEmail(email.value) !== true) {
-      res.textContent = "[error] O formato é diferente!  Ex: name@.com";
-
-    } else {
-      res.textContent = "Error"
+      // const  isValid = email.length >=5 && email.length <=12;
+      return isValid;
     }
 
-   })
+    if (nome.value === "") {
+      res.innerHTML = "Preencher todos os campos";
+      document.querySelector(".nome").focus();
+    } else if (snome.value === "") {
+      res.innerHTML = "Informe seu sobrenome";
+      res.setAttribute("style", "display", "block");
+      document.querySelector(".snome").focus();
+    } else if (email.value === "") {
+      res.innerHTML = "Informe seu e-mail";
+      res.setAttribute("style", "display", "block");
+      document.querySelector(".email").focus();
+    } else if (!validarEmail(email.value)) {
+      res.innerHTML = "[ ERROR ] O formato é diferente!";
+      res.setAttribute("style", "display", "block");
+      document.querySelector(".email").focus();
+    } else if (cel.value === "") {
+      res.textContent = "Informe seu celular";
+      res.setAttribute("style", "display", "block");
+      document.querySelector(".cel").focus();
+    } else if (data.value == "") {
+      res.innerHTML = "informe seu aniversário";
+      document.querySelector(".data").focus();
+    } else if (cep.value == "") {
+      // var padrao = /\d{5}-\d{3}/gi;
+      res.innerHTML = "informe o cep";
+      document.querySelector(".cep").focus();
+    } else if (end.value == "") {
+      res.innerHTML = "informe o endereço";
+      document.querySelector(".end").focus();
+    } else if (num.value == "") {
+      res.innerHTML = "informe o numero da residencia";
+      document.querySelector(".num").focus();
+    } else if (bairro.value == "") {
+      res.innerHTML = "Informe seu bairro";
+      document.querySelector(".bairro").focus();
+    } else if (cid.value == "") {
+      res.innerHTML = "Informe sua cidade";
+      document.querySelector(".cid").focus();
+    } else if (est.value == "") {
+      res.innerHTML = "Qual o estado";
+      document.querySelector(".est").focus();
+    } else {
+      window.location.href = "http://localhost:3000/formulario";
+      document.querySelector(".none").value = "";
+    }
 
-   function validarEmail (e) {
-    var caracteres = /^[_a-z0-9-] +(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
-    return caracteres.test(e)
+    //   email.addEventListener('keyup', () => {
+    //     if(validarEmail(email.value) === true) {
+    //     res.innerHTML =  "[error]"
+    //     } else {
 
-   }
-
-    
-
-
-    // if (nom.value == "") {
-    //   res.innerHTML = "Preencher os campos vazios";
-    //   document.querySelector(".nome").focus();
-
-    // } else if (sno.value == "") {
-    //   res.innerHTML = "Informe o sobrenome";
-    //   document.querySelector(".snome").focus();
-
-    // } else if (eme.value == "" ) {     
-      
-    //   res.innerHTML = "e-mail inválido";
-    //   document.querySelector(".email").focus();     
-      
-      
-
-    // } else if (cel.value == "") {
-    //   res.innerHTML = "informe o celular";
-    //   document.querySelector(".cel").focus();
-      
-    // } else if (ani.value == "") {
-    //   res.innerHTML = "informe a data de aniversário";
-    //   document.querySelector(".data").focus();
-
-    // } else if (cep.value == "") {
-    //   var padrao = /\d{5}-\d{3}/gi;
-    //   res.innerHTML = "informe o cep";
-    //   document.querySelector(".cep").focus();
-      
-    // } else if (end.value == "") {
-    //   res.innerHTML = "Informe o endereço";
-    //   document.querySelector(".end").focus();
-
-    // } else if (num.value == "") {
-    //   res.innerHTML = "informe o numero da residencia";
-    //   document.querySelector(".num").focus();
-
-    // } else if (bar.value == "") {
-    //   res.innerHTML = "Informe seu bairro";
-    //   document.querySelector(".bairro").focus();
-      
-    // } else if (cid.value == "") {
-    //   res.innerHTML = "Informe sua cidade";
-    //   document.querySelector(".cid").focus();
-
-    // } else if (est.value == "") {
-    //   res.innerHTML = "Qual o estado";
-    //   document.querySelector(".est").focus();
-
-    // } else {
-    //   window.location.href = "http://localhost:3000/formulario";
-    //   document.querySelector(".none").value = "";
-    // }
+    //       res.textContent = "";
   }
 
   return (
     <>
-      <section className="containner_cadcli">
-        <header className="header_cadcli"></header>
-        <img src={Logo} alt="" className="logo_cadcli" />
-        <header className="kz_cadcli">KAMISARIA ZANUTO</header>
+      <section className="corpo">
+        <header className="header_cadcli">
+          <img src={Logo} alt="" className="logo_cadcli" />
+          <header className="kz_cadcli">KAMISARIA ZANUTO</header>
+        </header>
 
         <div className="menu_cadcli">
           <ul>
@@ -140,17 +123,17 @@ function Cadcli() {
               </ul>
             </li>
             <li>Serviços</li>
+            <Link to="/contato">
             <li>Contato</li>
+            </Link>
           </ul>
         </div>
-       
 
-        <section className="card_cadcli">
-          <div className="card_dados">Entre com seus dados</div>
-          <main className="card_col1">
-            <p className="card_pessoais">Dados pessoais</p>
-
-            <section className="bloco_pessoal">
+       <section className="secaopai">
+          <div className="direcionamento">Entre com seus dados</div>
+          <div className="secaofilho">
+            <div className="lado-cliente">
+              <div className="dadoscliente">Dados Pessoais</div>
               <label className="l_nome">nome:</label>
               <input
                 type="text"
@@ -158,10 +141,8 @@ function Cadcli() {
                 placeholder=" nome"
                 autoFocus
               />
-
               <label className="l_snome">sobre nome:</label>
               <input type="text" className="snome" placeholder=" sobre nome" />
-
               <label className="l_email">e-mail:</label>
               <input
                 type="text"
@@ -169,71 +150,51 @@ function Cadcli() {
                 className="email"
                 placeholder=" e-mail"
               />
-
-             
-
               <label className="l_cel">celular:</label>
               <input
                 type="tel"
-                // pattern="\([0-9]{2}\)[9]{1}-[0-9]{3}-[0-9]{4} "
                 className="cel"
                 placeholder=" (xx) xxxxx-xxxx"
               />
-
               <label className="l_data">aniversário:</label>
               <input type="text" className="data" placeholder=" dia / mês" />
-            </section>
-          </main>
+            </div>
 
-          <main className="card_col2">
-            <div className="card_resid">Dados Res./Com.</div>
+            
+            
 
-            <section className="bloco_residencial">
-              <div className="div_cep">
-                <label className="l_cep">cep:</label>
-                <input type="text" className="cep" placeholder=" cep" />
-              </div>
+            <div className="lado-endereco">
+              <div className="dadosendereco">Dados Res./Com.</div>
+              <label className="l_cep">cep:</label>
+              <input type="text" className="cep" placeholder=" cep" />
+              <label className="l_end">endereço:</label>
+              <input type="text" className="end" placeholder="endereço" />
+              <label className="l_num">num.:</label>
+              <input type="text" className="num" placeholder=" n." />
+              <label className="l_comp">compl.:</label>
+              <input type="text" className="comp" placeholder=" apto" />
+              <label className="l_bairro">bairro:</label>
+              <input type="text" className="bairro" placeholder=" bairro" />
+              <label className="l_cid">cidade:</label>
+              <input type="text" className="cid" placeholder=" cidade" />
+              <label className="l_est">uf:</label>
+              <input type="text" className="est" placeholder=" UF" />
+            </div>
+          </div>
 
-              <div className="div_end">
-                <label className="l_end">endereço:</label>
-                <input type="text" className="end" placeholder="endereço" />
-              </div>
+          <div className="resposta">
+            <div className="res_cli"></div>
+            <button className="button_continuar" onClick={cadcli}>
+              CONTINUAR
+            </button>
+          </div>
+        </section> 
+     
+      {/* pattern="\([0-9]{2}\)[9]{1}-[0-9]{3}-[0-9]{4} " */}
+         
+     
 
-              <div className="div.num">
-                <label className="l_num">num.:</label>
-                <input type="text" className="num" placeholder=" n." />
-              </div>
-
-              <div className="div_comp">
-                <label className="l_comp">compl.:</label>
-                <input type="text" className="comp" placeholder=" apto" />
-              </div>
-
-              <div className="div_bairro">
-                <label className="l_bairro">bairro:</label>
-                <input type="text" className="bairro" placeholder=" bairro" />
-              </div>
-
-              <div className="div_cid">
-                <label className="l_cid">cidade:</label>
-                <input type="text" className="cid" placeholder=" cidade" />
-              </div>
-
-              <div className="div_est">
-                <label className="l_est">uf:</label>
-                <input type="text" className="est" placeholder=" UF" />
-              </div>
-
-              <button className="booton_cadicli" onClick={cadcli}>
-                CONTINUAR
-              </button>
-            </section>
-          </main>
-        </section>
-        <div className="res"></div>
-        {/*} ========================================<main></main>*/}
-
-        <div className="footer_cadcli">
+         <div className="footer_cadcli">
           <div className="nossoendereco">
             Nosso Endereço
             <div className="rodape">
@@ -261,7 +222,7 @@ function Cadcli() {
             </div>
           </div>
 
-          <div className="rede">
+          <div className="rede_cad">
             Rede Sociais
             <div className="rodape">
               {" "}
@@ -276,14 +237,14 @@ function Cadcli() {
             </div>
           </div>
 
-          <div className="redesociais">
+          <div className="redesociais_cad">
             <img className="instagram" src={Iinstagram} alt="" />
             <img className="facebook" src={Ifacebook} alt="" />
             <img className="pinterest" src={Ipinterest} alt="" />
             <img className="youtube" src={Iyoutube} alt="" />
           </div>
         </div>
-      </section>
+        </section> 
     </>
   );
 }
