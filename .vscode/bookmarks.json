@@ -89,6 +89,31 @@
 					"label": "CONST-INGLES"
 				}
 			]
+		},
+		{
+			"path": "src/Componentes/Newsletter/newsletter.jsx",
+			"bookmarks": [
+				{
+					"line": 23,
+					"column": 2,
+					"label": "FUNCTION clicar"
+				},
+				{
+					"line": 29,
+					"column": 2,
+					"label": "FUNCTION fechar"
+				},
+				{
+					"line": 72,
+					"column": 10,
+					"label": "BUTTON clicar"
+				},
+				{
+					"line": 131,
+					"column": 8,
+					"label": "BUTTON fechar"
+				}
+			]
 		}
 	]
 }

@@ -18,6 +18,20 @@ import itwiter from "../Icons/twiter.svg";
 import "../Newsletter/newsletter.css";
 
 const Newsletter = () => {
+
+  const [aberto, setAberto] = useState(false);
+
+  const abrirModal = () => {
+    const modal = document.getElementById('modal-promocao');
+    modal.classList.add('mostrar')
+   
+
+  }
+  const fechar = () => {
+    setAberto(false)
+    alert('tchal')
+  }
+
   return (
     <>
       <section className="corpo">
@@ -56,9 +70,8 @@ const Newsletter = () => {
 
         <section className="header-newsletter">
           <h2 className="titulo-new">Cadastre-se Em Nossa Newsletter</h2>
-          <button className="clique-aqui">Clique Aqui</button>
-        </section>
-      
+          <button className="clique-aqui" onClick={abrirModal} >Clique Aqui</button>
+        </section>      
 
       <div className="footer_newsletter">
           <div className="nossoendereco">
@@ -110,7 +123,20 @@ const Newsletter = () => {
             <img className="youtube" src={Iyoutube} alt="" />
           </div>
         </div>
-      </section>      
+      </section>  
+
+      {/* https://www.youtube.com/watch?v=pGJB5FgfdMI */}
+
+      <div id='modal-promocao' className="modal-container">
+        <div className="modal">
+        <button className='fechar' onClick={fechar} >X</button>
+        <h3 className="newsletter" >Cadastre-se na Newsletter</h3>
+        <form>
+            <input type="text" placeholder='e-mail' className='input-form' />
+            <input type="button" value="Cadastrar" className='cadastrar-form' />
+        </form>
+        </div>
+       </div>    
     </>
   );
 };
