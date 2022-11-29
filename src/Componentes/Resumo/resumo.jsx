@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { Link } from 'react-router-dom'
+
 import Logo from "../Icons/logokz.svg";
 import Capa from "../Icons/fotoCapa.svg";
 import Iinstagram from "../Icons/instagram.svg";
@@ -18,7 +20,7 @@ import ChanfradoB from "../Icons/Chanfradob.png";
 import Relogio from "../Icons/relogio.png";
 import Seta from "../Icons/seta.png";
 import Quadrado from "../Icons/quadrado.png";
-import Duplo from "../Icons/duplo.png";
+// import Duplo from "../Icons/duplo.png";
 import Redondo from "../Icons/redondo.png";
 
 import "../Resumo/resumo.css";
@@ -32,7 +34,9 @@ const Resumo = () => {
 
         <div className="menu">
           <ul>
+          <Link to="/" >
             <li>Inicio</li>
+            </Link>
             <li>Quem-somos</li>
             <li>
               vestuário
@@ -41,6 +45,9 @@ const Resumo = () => {
                 <li className="banner">Camisa masc.</li>
                 <li className="banner">Maneq. virtual</li>
                 <li className="banner">Monograma</li>
+                <Link to="/newsletter">
+                  <li className="banner">Newsletter</li>
+                  </Link>
                 <li className="banner">sapatos</li>
               </ul>
             </li>
@@ -95,7 +102,7 @@ const Resumo = () => {
           </div>
 
           <div className="magalhaes">
-            <img id="img-col" className="magalhaes1" src={Duplo} alt="" />
+            <img id="img-col" className="magalhaes1" src={''} alt="" />
             <input id="radio" className="input_duplo" type="radio" /> Duplo
             <br />
           </div>

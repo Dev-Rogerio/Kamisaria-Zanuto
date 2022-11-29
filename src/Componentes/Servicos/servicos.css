@@ -1,0 +1,149 @@
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+.dad {
+
+    display: grid;
+    /* grid-template-columns: 1fr; */
+    margin: 10%;
+    border: 1px solid #222;
+    height: 410px;
+    width: 400px;
+    background-color: burlywood;
+    border-radius: 3px;
+   
+}
+
+.l_valor-1 {
+    display: block;
+    margin-top: 20px;
+    justify-self: center;
+    text-transform: uppercase;
+  
+
+}
+
+.valor-1 {
+    display: block;
+    margin-top: 6px;  
+    justify-self: center;
+    background-color: beige;
+    border-radius: 3px;
+
+}
+
+.l_valor-2 {
+    display: block;
+    margin-top: 20px;
+    justify-self: center;
+    text-transform: uppercase;
+}
+
+.valor-2 {
+    margin-top: 6px;
+    justify-self: center;
+    background-color: beige;
+    border-radius: 3px;
+
+}
+.dosbuttons {
+    display: grid;
+    display: flex;
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.somar {
+    display: grid;   
+    width: 10%;   
+    height: 40px;
+    margin-top: 20px;
+    justify-self: center;
+    align-items: center;
+    text-transform: uppercase;  
+    font-size: 25px;
+    border-radius: 5px;
+}
+.subtrair {
+    display: grid;   
+    width: 10%;   
+    justify-self: center;
+    align-items: center;
+    text-transform: uppercase;  
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 900;
+    height: 40px;
+    margin-top: 20px;
+
+}
+.multiplicar {
+    display: grid;  
+    width: 10%;
+    padding: 10px;
+    justify-self: center;
+    align-items: center;
+    text-transform: uppercase;  
+    font-size: 25px;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 20px;
+    
+}
+.dividir {
+    display: grid;   
+    width: 10%;   
+    justify-self: center;
+    align-items: center;
+    text-transform: uppercase;  
+    font-size: 20px;
+    border-radius: 5px;
+    font-weight: 900;
+    height: 40px;
+    margin-top: 20px;
+}
+
+.res-resultado {
+    display: block;
+    margin-top: 8px;
+    justify-self: center;
+    text-transform: uppercase;
+    
+}
+
+.resultado {
+    display: grid;
+    margin-top: 6px;
+    border: 1px solid #222;
+    height: 70px;
+    width: 300px;
+    justify-self: center;
+    background-color: beige;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 22px;
+    color: red;
+    align-items: center;
+}
+.resumo {display: grid;
+    position: absolute;
+    width: 500px;
+    height: 140px;
+    background-color: beige;
+    border: 1px solid #222;
+    margin-left: 500px;
+    align-items: center;
+    justify-content: center;
+    animation: PiscaPisca 1.5s infinite;
+    font-size: 22px;
+}
+@keyframes PiscaPisca {
+    20% {
+        color: #e32f21;
+    }
+    10% {
+        color: #2be321;
+    }
+}

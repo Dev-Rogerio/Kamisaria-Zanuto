@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header-newsletter {    
+    position: absolute;
+    margin-top: 250px;
+    height: 100px;
+    display: flex;
+    justify-content: center;    
+}
+.clique-aqui {    
+    position: absolute;
+    margin-top: 50px;
+    width: 150px;
+    height: 30px;
+    border-radius: 3px;  
+    border: 1px solid rgb(0,0,0, 0.5);      
+}
+.titulo-new {
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.05rem;
+    animation: piscaPisca 1.7s infinite;
+}
+@keyframes piscaPisca {
+    50% {
+        color: rgb(84, 82, 82);
+    }
+    25% {
+        color: white;
+    }
+
+}
+.footer_newsletter {
+  display: grid;
+  background: #222;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  height: 300px;
+  margin-top: 220px;
+  width: 100%;
+
+}

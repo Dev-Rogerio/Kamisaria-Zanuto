@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
 
@@ -14,83 +14,53 @@ import iinsta from "../Icons/cinsta.svg";
 import itel from "../Icons/ctel.svg";
 import iwhats from "../Icons/cwhats.svg";
 import itwiter from "../Icons/twiter.svg";
-import "../DescricaoColar/descricaoColar.css";
 
-function DescricaoColar() {
+import "../Newsletter/newsletter.css";
 
-  var Zoom = localStorage.getItem("figura");
-  //img.style.transform = 'scale(2)';
-
-  
-  
+const Newsletter = () => {
   return (
     <>
-      <containner className="containner-descicao">
-        <section className="menu_form">
-          <img src={Logo} alt="" className="logo" />
-          <header className="kz">KAMISARIA ZANUTO</header>
+      <section className="corpo">
+        <div className="menucad">
+          <header className="header_cadcli">
+            <img src={Logo} alt="" className="logo_cadcli" />
+            <header className="kz_cadcli">KAMISARIA ZANUTO</header>
+          </header>
 
           <div className="menu">
-          <ul>
-          <Link to="/" >
-            <li>Inicio</li>
-            </Link>
-            <li>Quem-somos</li>
-            <li>
-              vestuário
-              <ul>
-                <li className="banner">Camisa fem.</li>
-                <li className="banner">Camisa masc.</li>
-                <Link to="/cadcli">
-                  <li className="banner">Maneq.virtual</li>
-                </Link>
-                <li className="banner">Monograma</li>
-                <Link to="/newsletter">
-                  <li className="banner">Newsletter</li>
+            <ul>
+                <Link to="/">
+              <li>Inicio</li>
+              </Link>
+              <li>Quem-somos</li>
+              <li>
+                vestuário
+                <ul>
+                  <li className="banner">Camisa fem.</li>
+                  <li className="banner">Camisa masc.</li>
+                  <Link to="/cadcli">
+                    <li className="banner">Maneq.virtual</li>
                   </Link>
-                <li className="banner">sapatos</li>
-              </ul>
-            </li>
-            <li>Serviços</li>
-            <Link to="/contato">
-              <li>Contato</li>
-            </Link>
-          </ul>
+                  <li className="banner">Monograma</li>                 
+                  <li className="banner">Newsletter</li>                 
+                  <li className="banner">sapatos</li>
+                </ul>
+              </li>
+              <li>Serviços</li>
+              <Link to="/contato">
+                <li>Contato</li>
+              </Link>
+            </ul>
+          </div>
         </div>
 
+        <section className="header-newsletter">
+          <h2 className="titulo-new">Cadastre-se Em Nossa Newsletter</h2>
+          <button className="clique-aqui">Clique Aqui</button>
         </section>
+      
 
-        <section className="aside-descricao">
-          <div className="mode">
-            <div className="zoom">
-            <img
-              id="fig"
-              className="zoon"
-              src={Zoom}
-              alt=""
-              width="400px"
-              height="340px"
-            />
-            </div>
-          </div>
-
-          <div className="descricao-colar">
-            <h1 className="h1-desc">Descrição do colarinho</h1>
-            <p className="desc-ingles">
-              Esse tipo de colarinho se caracteriza pelas pontas mais
-              pontiagudas e alongadas, porém, sempre bem justas e, praticamente,
-              seguindo a linha da gravata. Aliás, esse acessório — a gravata — é
-              fundamental para a camisa que ostenta um colarinho assim.
-            </p>
-
-            <Link to="/agradecimento" >
-            <button className="booton-descricao">FINALIZAR</button>
-            </Link>
-          </div>
-        </section>
-
-        
-        <div className="footer-descricao">
+      <div className="footer_newsletter">
           <div className="nossoendereco">
             Nosso Endereço
             <div className="rodape">
@@ -133,15 +103,15 @@ function DescricaoColar() {
             </div>
           </div>
 
-          <div className="redesociais">
+          <div className="redesociais_cad">
             <img className="instagram" src={Iinstagram} alt="" />
             <img className="facebook" src={Ifacebook} alt="" />
             <img className="pinterest" src={Ipinterest} alt="" />
             <img className="youtube" src={Iyoutube} alt="" />
           </div>
         </div>
-      </containner>
+      </section>      
     </>
   );
-}
-export default DescricaoColar;
+};
+export default Newsletter;

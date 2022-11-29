@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
 }
@@ -54,10 +54,7 @@
     margin-top: 10px;
     height: 350px;
     
-}
-
-/* ----------------------------------------------------- */
-
+} 
 .nome_contato {
     height: 50px;
     width: 50%;
@@ -84,11 +81,9 @@
     position: absolute;
     width: 20px;
     margin-left: -30px;
-    margin-top: 18px;
+    margin-top: 18px; 
 
 }
-
-/* ------------------------------------------------ */
 .email_contato {
     height: 50px;
     width: 50%;
@@ -117,11 +112,7 @@
     margin-left: -29px;
     margin-top: 24px;
     
-}
-
-
-/* ------------------------------------------------ */
-
+} 
 .text-area {
     position: absolute;
     margin: 0;
@@ -152,17 +143,17 @@ legend {
    
 }
 .button_contato {
-    width: 20%;
-    height: 40px;
+    width: 25%;
+    height: 30px;
     background: #48484b;
     color: #ffffff;
     border-radius: 5px;
     margin-top: 20px;
-    margin-left: 80%;
+    margin-left: 75%;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     font-style: italic;
     letter-spacing: 0.08rem;
     cursor: pointer;
-}
+} 

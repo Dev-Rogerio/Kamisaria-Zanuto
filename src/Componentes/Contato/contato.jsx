@@ -38,24 +38,29 @@ function Contato() {
 
           <div className="menu">
             <ul>
-              <Link to="/">
-                <li>Inicio</li>
-              </Link>
-              <li>
-                vestuario
-                <ul>
-                  <li>Camisa fem.</li>
-                  <li>Camisa masc.</li>
-                  <Link to="/cadcli">
-                  <li>Maniq. Virtual</li>
+            <Link to="/" >
+            <li>Inicio</li>
+            </Link>
+            <li>Quem-somos</li>
+            <li>
+              vestuário
+              <ul>
+                <li className="banner">Camisa fem.</li>
+                <li className="banner">Camisa masc.</li>
+                <Link to="/cadcli">
+                  <li className="banner">Maneq.virtual</li>
+                </Link>
+                <li className="banner">Monograma</li>
+                <Link to="/newsletter">
+                  <li className="banner">Newsletter</li>
                   </Link>
-
-                  <li>Monograma</li>
-                  <li>Sapato</li>
-                </ul>
-              </li>
-              <li>Serviços</li>
+                <li className="banner">sapatos</li>
+              </ul>
+            </li>
+            <li>Serviços</li>
+            <Link to="/contato">
               <li>Contato</li>
+            </Link>
             </ul>
           </div>
         </section>

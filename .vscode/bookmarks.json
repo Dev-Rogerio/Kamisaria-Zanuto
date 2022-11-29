@@ -4,52 +4,57 @@
 			"path": "src/Componentes/Formulário/formulario.jsx",
 			"bookmarks": [
 				{
-					"line": 27,
+					"line": 28,
 					"column": 1,
-					"label": "FUNCAO"
+					"label": "FUNCAO receber"
 				},
 				{
-					"line": 135,
+					"line": 102,
+					"column": 2,
+					"label": "RETURN"
+				},
+				{
+					"line": 144,
 					"column": 16,
 					"label": "INPUT-COLAR"
 				},
 				{
-					"line": 151,
+					"line": 160,
 					"column": 16,
 					"label": "INPUT-PALA"
 				},
 				{
-					"line": 163,
+					"line": 172,
 					"column": 16,
 					"label": "INPUT-MANGA"
 				},
 				{
-					"line": 176,
+					"line": 185,
 					"column": 16,
 					"label": "INPUT-TORAX"
 				},
 				{
-					"line": 188,
+					"line": 197,
 					"column": 16,
 					"label": "INPUY-CINTURA"
 				},
 				{
-					"line": 198,
+					"line": 206,
 					"column": 14,
 					"label": "INPUT-QUADRIL"
 				},
 				{
-					"line": 212,
+					"line": 220,
 					"column": 16,
 					"label": "INPUT-CUMPRIMENTO"
 				},
 				{
-					"line": 222,
+					"line": 230,
 					"column": 12,
 					"label": "INPUT-PUNHO"
 				},
 				{
-					"line": 245,
+					"line": 253,
 					"column": 10,
 					"label": "DIV-RES"
 				}
@@ -59,17 +64,17 @@
 			"path": "src/Componentes/Cadastro/cadcli.jsx",
 			"bookmarks": [
 				{
-					"line": 194,
-					"column": 16,
-					"label": "INPUT-ESTADO"
+					"line": 103,
+					"column": 6,
+					"label": ""
 				},
 				{
-					"line": 198,
+					"line": 202,
 					"column": 14,
 					"label": "BUTTON"
 				},
 				{
-					"line": 204,
+					"line": 208,
 					"column": 8,
 					"label": "DIV-RES"
 				}

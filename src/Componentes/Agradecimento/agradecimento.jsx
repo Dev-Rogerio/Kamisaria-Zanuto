@@ -27,29 +27,34 @@ function Agradecimento() {
           <header className="kz">KAMISARIA ZANUTO</header>
 
           <div className="menu">
-            <ul>
-              <Link to="/">
-                <li>Inicio</li>
-              </Link>
-              <li>
-                vestuario
-                <ul>
-                  <li>Camisa fem.</li>
-                  <li>Camisa masc.</li>
-                  <li>Maniq. Virtual</li>
-                  <li>Monograma</li>
-                  <li>Sapato</li>
-                </ul>
-              </li>
-              <li>Serviços</li>
-              <Link to='/contato'><li>Contato</li></Link>
-            </ul>
-          </div>
-        </section>
-        {/* =======================================================aside */}
+          <ul>
+            <Link to="/" >
+            <li>Inicio</li>
+            </Link>
+            <li>Quem-somos</li>
+            <li>
+              vestuário
+              <ul>
+                <li className="banner">Camisa fem.</li>
+                <li className="banner">Camisa masc.</li>
+                <Link to="/cadcli">
+                  <li className="banner">Maneq.virtual</li>
+                </Link>
+                <li className="banner">Monograma</li>
+                <Link to="/newsletter">
+                  <li className="banner">Newsletter</li>
+                  </Link>
+                <li className="banner">sapatos</li>
+              </ul>
+            </li>
+            <li>Serviços</li>
+            <Link to="/contato">
+              <li>Contato</li>
+            </Link>
+          </ul>
+        </div>
 
-
-        
+        </section>        
 
         <section className="aside-agradecimento">
 

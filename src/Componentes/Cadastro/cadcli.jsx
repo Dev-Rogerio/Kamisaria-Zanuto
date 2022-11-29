@@ -87,7 +87,7 @@ function Cadcli() {
       res.innerHTML = "Qual o estado";
       document.querySelector(".est").focus();
     } else {
-      window.location.href = "http://localhost:3000/formulario";
+      window.location.href = "http://localhost:3001/formulario";
       document.querySelector(".none").value = "";
     }
 
@@ -102,34 +102,43 @@ function Cadcli() {
   return (
     <>
       <section className="corpo">
-        <header className="header_cadcli">
-          <img src={Logo} alt="" className="logo_cadcli" />
-          <header className="kz_cadcli">KAMISARIA ZANUTO</header>
-        </header>
+        <div className="menucad">
+          <header className="header_cadcli">
+            <img src={Logo} alt="" className="logo_cadcli" />
+            <header className="kz_cadcli">KAMISARIA ZANUTO</header>
+             </header>
 
-        <div className="menu_cadcli">
+             <div className="menu">
           <ul>
             <Link to="/">
-              <li>Inicio</li>
+            <li>Inicio</li>
             </Link>
+            <li>Quem-somos</li>
             <li>
-              vestuario
+              vestuário
               <ul>
-                <li>Camisa fem.</li>
-                <li>Camisa masc.</li>
-                <li>Maniq. Virtual</li>
-                <li>Monograma</li>
-                <li>Sapato</li>
+                <li className="banner">Camisa fem.</li>
+                <li className="banner">Camisa masc.</li>
+                <Link to="/cadcli">
+                  <li className="banner">Maneq.virtual</li>
+                </Link>
+                <li className="banner">Monograma</li>
+                <Link to="/newsletter">
+                  <li className="banner">Newsletter</li>
+                  </Link>
+                <li className="banner">sapatos</li>
               </ul>
             </li>
             <li>Serviços</li>
             <Link to="/contato">
-            <li>Contato</li>
+              <li>Contato</li>
             </Link>
           </ul>
         </div>
+         
+        </div>
 
-       <section className="secaopai">
+        <section className="secaopai">
           <div className="direcionamento">Entre com seus dados</div>
           <div className="secaofilho">
             <div className="lado-cliente">
@@ -160,9 +169,6 @@ function Cadcli() {
               <input type="text" className="data" placeholder=" dia / mês" />
             </div>
 
-            
-            
-
             <div className="lado-endereco">
               <div className="dadosendereco">Dados Res./Com.</div>
               <label className="l_cep">cep:</label>
@@ -188,13 +194,11 @@ function Cadcli() {
               CONTINUAR
             </button>
           </div>
-        </section> 
-     
-      {/* pattern="\([0-9]{2}\)[9]{1}-[0-9]{3}-[0-9]{4} " */}
-         
-     
+        </section>
 
-         <div className="footer_cadcli">
+        {/* pattern="\([0-9]{2}\)[9]{1}-[0-9]{3}-[0-9]{4} " */}
+
+        <div className="footer_cadcli">
           <div className="nossoendereco">
             Nosso Endereço
             <div className="rodape">
@@ -244,7 +248,7 @@ function Cadcli() {
             <img className="youtube" src={Iyoutube} alt="" />
           </div>
         </div>
-        </section> 
+      </section>
     </>
   );
 }

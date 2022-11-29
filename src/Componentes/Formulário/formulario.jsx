@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+
 import Logo from "../Icons/logokz.svg";
 import "../Formulário/formulario.css";
 import Iinstagram from "../Icons/instagram.svg";
@@ -61,7 +62,7 @@ function Formulario() {
       res.innerHTML = "Qual a medidaas do punho";
       document.querySelector(".punho").focus();
     } else {
-      window.location.href = "http://localhost:3000/modelo";
+      window.location.href = "http://localhost:3001/modelo";
       
     }
     
@@ -107,24 +108,32 @@ function Formulario() {
           <header className="kz">KAMISARIA ZANUTO</header>
 
           <div className="menu">
-            <ul>
-              <Link to="/">
-                <li>Inicio</li>
-              </Link>
-              <li>
-                vestuario
-                <ul>
-                  <li>Camisa fem.</li>
-                  <li>Camisa masc.</li>
-                  <li>Maniq. Virtual</li>
-                  <li>Monograma</li>
-                  <li>Sapato</li>
-                </ul>
-              </li>
-              <li>Serviços</li>
+          <ul>
+          <Link to="/" >
+            <li>Inicio</li>
+            </Link>
+            <li>Quem-somos</li>
+            <li>
+              vestuário
+              <ul>
+                <li className="banner">Camisa fem.</li>
+                <li className="banner">Camisa masc.</li>
+                <Link to="/cadcli">
+                  <li className="banner">Maneq.virtual</li>
+                </Link>
+                <li className="banner">Monograma</li>
+                <Link to="/newsletter">
+                  <li className="banner">Newsletter</li>
+                  </Link>
+                <li className="banner">sapatos</li>
+              </ul>
+            </li>
+            <li>Serviços</li>
+            <Link to="/contato">
               <li>Contato</li>
-            </ul>
-          </div>
+            </Link>
+          </ul>
+        </div>
         </section>
 
         <section className="aside_form">
@@ -189,8 +198,7 @@ function Formulario() {
                 <input
                   onClick={TrocarCintura}
                   className="cintura"
-                  type="number"
-                  placeholder="  0.00"
+                  type="number"                  placeholder="  0.00"
                   required
                 />
                 <h3 className="video">vídeo</h3>

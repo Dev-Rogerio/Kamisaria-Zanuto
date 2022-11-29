@@ -64,7 +64,7 @@ boby {
     font-size: 18px;
     color: red;
     /* text-transform: uppercase; */
-    width: 1000px;
+     width: 1000px;
     height: 50px;
     font-family: sans-serif;
     animation: piscaPisca 1.5s infinite;
@@ -336,7 +336,7 @@ boby {
     font-size: 1.2em;
     text-align: center;
     margin-top: -10px;
-}
+} 
 .cintura {
     width: 100px;
     height: 30px;
@@ -426,9 +426,7 @@ boby {
     border-top: 1px solid #9fa1a1;
     border-right: 1px solid #9fa1a1;
     border-left: 4px solid #7F8487;
-}
-
-/*=======================================================booton*/
+} 
 .booton_form {
     position: absolute;
     display: block;
@@ -454,10 +452,6 @@ boby {
     transform: translate(-3px);
     color: #fff;
 }
-
-/*========================================================FOOTER*/
-
-
 .footer_form {
     display: grid;
     background: #222;
@@ -469,4 +463,4 @@ boby {
     margin-top: 16px;
     margin-top: -15px;
 
-}
+} 

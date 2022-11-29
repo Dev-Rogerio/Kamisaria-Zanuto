@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import _default from "react-bootstrap/esm/Accordion";
+// import _default from "react-bootstrap/esm/Accordion";
 import Logo from "../Icons/logokz.svg";
 import Iinstagram from "../Icons/instagram.svg";
 import Ifacebook from "../Icons/facebook.svg";
@@ -35,52 +35,52 @@ import "../Modelo/modelo.css";
 
 function modelo() {
   const Italia = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
     window.querySelector(".figura").src = Imging;
   };
 
   const Ital = () => {
-    window.location.href = "http://localhost:3000/resumo";
+    window.location.href = "http://localhost:3001/resumo";
   };
 
   const Ingle = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
     localStorage.setItem("figura", Imging);
   };
 
   const Mona = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const Par = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const America = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const Maga = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
   const Win = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const Xan = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const Dogl = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const Joa = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   const Presi = () => {
-    window.location.href = "http://localhost:3000/descricaoColar";
+    window.location.href = "http://localhost:3001/descricaoColar";
   };
 
   return (
@@ -91,24 +91,33 @@ function modelo() {
           <header className="kz">KAMISARIA ZANUTO</header>
 
           <div className="menu">
-            <ul>
-              <Link to="/">
-                <li>Inicio</li>
-              </Link>
-              <li>
-                vestuario
-                <ul>
-                  <li>Camisa fem.</li>
-                  <li>Camisa masc.</li>
-                  <li>Maniq. Virtual</li>
-                  <li>Monograma</li>
-                  <li>Sapato</li>
-                </ul>
-              </li>
-              <li>Serviços</li>
+          <ul>
+          <Link to="/" >
+            <li>Inicio</li>
+            </Link>
+            <li>Quem-somos</li>
+            <li>
+              vestuário
+              <ul>
+                <li className="banner">Camisa fem.</li>
+                <li className="banner">Camisa masc.</li>
+                <Link to="/cadcli">
+                  <li className="banner">Maneq.virtual</li>
+                </Link>
+                <li className="banner">Monograma</li>
+                <Link to="/newsletter">
+                  <li className="banner">Newsletter</li>
+                  </Link>
+                <li className="banner">sapatos</li>
+              </ul>
+            </li>
+            <li>Serviços</li>
+            <Link to="/contato">
               <li>Contato</li>
-            </ul>
-          </div>
+            </Link>
+          </ul>
+        </div>
+
         </section>
 
         <section className="envelope_aside_modelo">

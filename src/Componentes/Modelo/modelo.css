@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -96,7 +97,6 @@
   align-items: center;
   align-self: center;
 }
-/* ================================================================IMG */
 
 .l_italiano {
   display: flex;
@@ -234,8 +234,6 @@
   
 }
 
-/* Segunda coluna */
-
 .l_magalhaes {
   font-size: 1.2em;
   text-align: center;
@@ -368,13 +366,7 @@
   width: 102px;
   height: 140px;
   border: 1px solid #e9941a;
-}
-
-
-
-
-/* ===========================================================//Botao======= */
-
+} 
 .booton_modelo {
   display: flex;
   width: 193px;
@@ -398,12 +390,7 @@
   transform: translate(-3px);
   color: #fff;
 }
-
-
-
-/* ===========================================================//=footer====== */
-
-.footer-form {
+git .footer-form {
   display: grid;
   background: #222;
   grid-template-columns: 1fr 1fr 1fr;
