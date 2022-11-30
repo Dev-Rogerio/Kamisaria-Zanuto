@@ -74,19 +74,21 @@
     position: relative;
 }
 
-@keyframes modal {
+@keyframes Modal {
     from {
-        opacity: 1;
-        transform: matrix3d(0, -60px, 0);
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
     }
     to {
         opacity: 1;
-        transform: matrix3d(0,0,0);
+        transform: translate3d(0,0,0);
     }
 }
-.mostar .modal {
-    animation: modal .3s;
+.mostrar .modal {
+    animation: Modal 0.5s;
 }
+
+
 .fechar {
     position: absolute;
     top: -30px;
@@ -96,7 +98,7 @@
     border-radius: 50%;
     border: 4px solid white;
     background: #988b7a;
-    box-shadow: 0 4px 4px 0 rgba(0,0,0,.3);
+    box-shadow:  4px 4px 2px rgba(0,0,0,.3);
     color: white;
     font-size: 1.2em;
    
@@ -105,9 +107,78 @@
 .clique-aqui {
     cursor: pointer;
 }
-.cadastrar-form {
-    cursor: pointer;
-}
 .fechar {
     cursor: pointer;
 }
+
+.newsletter {
+    display: flex;
+    margin-top: -35px;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 200;
+    font-size: 25px;
+}
+form {
+    display: flex;
+    grid-gap: 35px;
+}
+.dad-email {
+    position: absolute; 
+    /* display: flex;    */
+}
+
+.i-nome {
+    width: 200px;
+    height: 15px;
+    border: 1px solid rgba(76,76,76,0.5);
+    padding: 5px;
+    border-radius: 2px;
+    display: block;
+    outline: 0;
+}
+
+.i-email {
+    width: 430px;
+    height: 15px;
+    border: 1px solid rgba(76,76,76,0.5);
+    padding: 5px;
+    border-radius: 2px;
+    display: block;
+    outline: 0;
+}
+/* https://www.youtube.com/watch?v=Fbf-u2ZXCd0&t=8s   animação no botao */
+
+.cadastrar-form {
+    position: absolute;
+    cursor: pointer;
+    margin-left: 15px;
+    width: 150px;
+    padding: 7px;
+    margin-top: 17px;
+    border-radius: 3px;
+    border: 0;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+    background: #4169e1;
+    box-shadow: 1px 1px 0px 1px #000;   
+    color: white; 
+}
+.cadastrar-form:active {
+    box-shadow: 0 0 0 0 #000, inset 1px 1px 1px #000;
+    transform: translate(3px, 3px);
+}
+.res-newsletter {
+    position: absolute;
+    width: 500px;
+    padding: 7px;
+    margin-top: 50px;
+    margin-left: 170px;
+    text-align: center;
+}
+
+   
+

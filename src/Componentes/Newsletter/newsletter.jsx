@@ -17,20 +17,25 @@ import itwiter from "../Icons/twiter.svg";
 
 import "../Newsletter/newsletter.css";
 
-const Newsletter = () => {
+  
+var res = window.document.querySelector(".res-newsletter");
+var nome = window.document.querySelector(".i-nome");
+var email = window.Document.querySelector(".i-email");
 
-  const [aberto, setAberto] = useState(false);
+const Newsletter = () => {
+  
+ 
 
   const abrirModal = () => {
-    const modal = document.getElementById('modal-promocao');
-    modal.classList.add('mostrar')
-   
+    const modal = document.getElementById("modal-promocao");
+    modal.classList.add("mostrar");
 
-  }
-  const fechar = () => {
-    setAberto(false)
-    alert('tchal')
-  }
+    modal.addEventListener("click", (e) => {
+      if (e.target.id == "fechar") {
+        modal.classList.remove("mostrar");
+      }
+    });
+  };
 
   return (
     <>
@@ -43,8 +48,8 @@ const Newsletter = () => {
 
           <div className="menu">
             <ul>
-                <Link to="/">
-              <li>Inicio</li>
+              <Link to="/">
+                <li>Inicio</li>
               </Link>
               <li>Quem-somos</li>
               <li>
@@ -55,8 +60,8 @@ const Newsletter = () => {
                   <Link to="/cadcli">
                     <li className="banner">Maneq.virtual</li>
                   </Link>
-                  <li className="banner">Monograma</li>                 
-                  <li className="banner">Newsletter</li>                 
+                  <li className="banner">Monograma</li>
+                  <li className="banner">Newsletter</li>
                   <li className="banner">sapatos</li>
                 </ul>
               </li>
@@ -70,10 +75,12 @@ const Newsletter = () => {
 
         <section className="header-newsletter">
           <h2 className="titulo-new">Cadastre-se Em Nossa Newsletter</h2>
-          <button className="clique-aqui" onClick={abrirModal} >Clique Aqui</button>
-        </section>      
+          <button className="clique-aqui" onClick={abrirModal}>
+            Clique Aqui
+          </button>
+        </section>
 
-      <div className="footer_newsletter">
+        <div className="footer_newsletter">
           <div className="nossoendereco">
             Nosso Endereço
             <div className="rodape">
@@ -123,20 +130,38 @@ const Newsletter = () => {
             <img className="youtube" src={Iyoutube} alt="" />
           </div>
         </div>
-      </section>  
+      </section>
 
       {/* https://www.youtube.com/watch?v=pGJB5FgfdMI */}
 
-      <div id='modal-promocao' className="modal-container">
+      <div id="modal-promocao" className="modal-container">
         <div className="modal">
-        <button className='fechar' onClick={fechar} >X</button>
-        <h3 className="newsletter" >Cadastre-se na Newsletter</h3>
-        <form>
-            <input type="text" placeholder='e-mail' className='input-form' />
-            <input type="button" value="Cadastrar" className='cadastrar-form' />
-        </form>
+          <button className="fechar" id="fechar">
+            X
+          </button>
+          <h3 className="newsletter">Preencha os dados</h3>
+          <form>
+
+          <div className="dad-nome">
+            <label htmlFor="l_nome">Nome:</label>
+            <input type="text" placeholder="Nome" className="i-nome" />           
+            </div>
+
+            <div className="dad-E-mail">
+              <label htmlFor="l_email">E-mail:</label>
+              <input type="text" placeholder="E-mail" className="i-email" />
+            </div>   
+
+
+            <div className="dad_button">
+            <input type="button" value="Cadastrar" className="cadastrar-form" />
+            </div>    
+
+            <div className="res-newsletter"></div>     
+
+          </form>
         </div>
-       </div>    
+      </div>
     </>
   );
 };
