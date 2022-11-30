@@ -17,14 +17,27 @@ import itwiter from "../Icons/twiter.svg";
 
 import "../Newsletter/newsletter.css";
 
-  
-var res = window.document.querySelector(".res-newsletter");
-var nome = window.document.querySelector(".i-nome");
-var email = window.Document.querySelector(".i-email");
-
 const Newsletter = () => {
-  
- 
+
+
+
+  const Cadastrar = () => {
+    var res = document.querySelector(".res-newsletter");
+    var nome = document.querySelector(".i-nome");
+    var email = document.querySelector(".i-email");
+
+    if (nome.value === "" || nome.value.length <=3) {
+      res.innerHTML = "Minímo de caractere 4";
+      document.querySelector('.i-nome').focus();
+    }
+    else if(email.value === '') {
+      res.innerHTML = "[ error ] Ex:. @.com";
+      document.querySelector('.i-email').focus();
+    }
+    else {
+      
+    }
+  };
 
   const abrirModal = () => {
     const modal = document.getElementById("modal-promocao");
@@ -141,24 +154,26 @@ const Newsletter = () => {
           </button>
           <h3 className="newsletter">Preencha os dados</h3>
           <form>
-
-          <div className="dad-nome">
-            <label htmlFor="l_nome">Nome:</label>
-            <input type="text" placeholder="Nome" className="i-nome" />           
+            <div className="dad-nome">
+              <label htmlFor="l_nome">Nome:</label>
+              <input type="text" placeholder="Nome" className="i-nome" />
             </div>
 
             <div className="dad-E-mail">
               <label htmlFor="l_email">E-mail:</label>
               <input type="text" placeholder="E-mail" className="i-email" />
-            </div>   
-
+            </div>
 
             <div className="dad_button">
-            <input type="button" value="Cadastrar" className="cadastrar-form" />
-            </div>    
+              <input
+                type="button"
+                value="Cadastrar"
+                onClick={Cadastrar}
+                className="cadastrar-form"
+              />
+            </div>
 
-            <div className="res-newsletter"></div>     
-
+            <div className="res-newsletter"></div>
           </form>
         </div>
       </div>
