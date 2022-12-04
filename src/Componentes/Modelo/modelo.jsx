@@ -35,52 +35,52 @@ import "../Modelo/modelo.css";
 
 function modelo() {
   const Italia = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
     window.querySelector(".figura").src = Imging;
   };
 
   const Ital = () => {
-    window.location.href = "http://localhost:3001/resumo";
+    window.location.href = "http://localhost:3000/resumo";
   };
 
   const Ingle = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
     localStorage.setItem("figura", Imging);
   };
 
   const Mona = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const Par = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const America = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const Maga = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
   const Win = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const Xan = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const Dogl = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const Joa = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   const Presi = () => {
-    window.location.href = "http://localhost:3001/descricaoColar";
+    window.location.href = "http://localhost:3000/descricaoColar";
   };
 
   return (

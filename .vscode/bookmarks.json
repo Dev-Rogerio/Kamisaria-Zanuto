@@ -94,12 +94,12 @@
 			"path": "src/Componentes/Newsletter/newsletter.jsx",
 			"bookmarks": [
 				{
-					"line": 98,
+					"line": 127,
 					"column": 10,
 					"label": "BUTTON clicar"
 				},
 				{
-					"line": 159,
+					"line": 188,
 					"column": 8,
 					"label": "BUTTON fechar"
 				}

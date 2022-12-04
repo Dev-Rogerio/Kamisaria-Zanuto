@@ -87,7 +87,7 @@ function Cadcli() {
       res.innerHTML = "Qual o estado";
       document.querySelector(".est").focus();
     } else {
-      window.location.href = "http://localhost:3001/formulario";
+      window.location.href = "http://localhost:3000/formulario";
       document.querySelector(".none").value = "";
     }
 

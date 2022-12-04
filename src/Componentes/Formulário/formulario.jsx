@@ -62,7 +62,7 @@ function Formulario() {
       res.innerHTML = "Qual a medidaas do punho";
       document.querySelector(".punho").focus();
     } else {
-      window.location.href = "http://localhost:3001/modelo";
+      window.location.href = "http://localhost:3000/modelo";
       
     }
     
