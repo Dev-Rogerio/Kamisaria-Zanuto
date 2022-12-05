@@ -31,8 +31,7 @@ const Newsletter = () => {
     var nome = document.querySelector(".i-nome");
     if (nome.value === "" || nome.value.length <=3) {
       res.innerHTML = "Campo nome, precisa no minímo 4 caracteres";
-      document.querySelector('.i-nome').focus(); 
-     
+      document.querySelector('.i-nome').focus();      
      
     }    
 

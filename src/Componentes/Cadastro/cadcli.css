@@ -398,12 +398,12 @@
   height: 40px;
   color: red;
   margin-left: 5px;
-  width: 1157px;
+  width: 1257px;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
-  font-size: 13px;
-  letter-spacing: 0.2em;
+  font-size: 10px;
+  letter-spacing: 0.1rem;
   font-family: sans-serif;
   text-transform: uppercase;
   animation: piscaPisca 1.5s infinite;
@@ -414,11 +414,11 @@
 
 @keyframes piscaPisca {
   20% {
-    color: #e32f21;
+    color: #eee7de;
   }
 
   10% {
-    color: #fff;
+    color: #eee7de;
   }
 }
 
@@ -430,27 +430,31 @@
 
 }
 
-.button_continuar {
-  width: 20%;
-  height: 40px;
-  background: #48484b;
-  color: #ffffff;
-  border-radius: 5px;
-  margin-top: 1px;
-  /* margin-left: 75.5%; */
+.button_continuar {  
+  position: absolute;
+  cursor: pointer;
+  width: 150px;
+  padding: 7px;
+  border-radius: 3px;
+  border: 0;
+  text-transform: uppercase;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
-  font-style: italic;
-  letter-spacing: 0.08rem;
-  cursor: pointer;
+  font-family: sans-serif;
+  letter-spacing: 0.1rem;
+  background: #4169e1;
+  box-shadow: 1px 1px 0px 1px #000;   
+  color: white; 
+  margin-top: 5px;
+  margin-left: 1300px;
 
 }
 
-.button_continuar:hover {
-  background-color: rgb(46, 44, 44);
-  transform: translate(-3px);
-  color: #ffffff;
+.button_continuar:active {
+  box-shadow: 0 0 0 0 #000, inset 1px 1px 1px #000;
+  transform: translate(3px, 3px);
+ 
 
 }
 
@@ -575,10 +579,11 @@
   text-align: center;
   justify-content: center;
 }
-.resposta {
+.resposta {  
   display: flex;
   position: absolute;
-  margin-top: 400px;
+  margin-top: 400px; 
+  
 }
 .res_cli {
   width: 580px;

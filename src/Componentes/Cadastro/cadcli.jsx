@@ -16,6 +16,36 @@ import iwhats from "../Icons/cwhats.svg";
 import itwiter from "../Icons/twiter.svg";
 
 function Cadcli() {
+ 
+   const limparResultado = () => {
+    var nome = window.document.querySelector('.nome');
+    var snome = window.document.querySelector('.snome');
+    var email = window.document.querySelector('.email');
+    var cel = window.document.querySelector('.cel');
+    var data = window.document.querySelector('.data');
+    var cep = window.document.querySelector('.cep');
+    var num = window.document.querySelector('.num');
+    var comp = window.document.querySelector('.comp');
+    var bairro = window.document.querySelector('.bairro');
+    var cid = window.document.querySelector('.cid');
+    var est = window.document.querySelector('.est');    
+    var res = window.document.querySelector('.res_cli');
+
+    res.innerHTML = ''
+    
+
+    if(nome.value === '' || nome.value.length <=3) {
+      res.innerHTML = '[ Error nome ]'
+      window.document.querySelector('.nome').focus();
+    }
+   
+   else if(snome.value === '' || snome.value.length <=2) {
+      res.innerHTML = '[ Error email ]';
+      window.document.querySelector('.snome').focus();
+    }
+   }
+
+
   function cadcli(e) {
     var nome = window.document.querySelector(".nome");
     var snome = window.document.querySelector(".snome");
@@ -45,7 +75,7 @@ function Cadcli() {
       return isValid;
     }
 
-    if (nome.value === "") {
+    if (nome.value === "" || nome.value.length <=2) {
       res.innerHTML = "Preencher todos os campos";
       document.querySelector(".nome").focus();
     } else if (snome.value === "") {
@@ -149,6 +179,7 @@ function Cadcli() {
                 className="nome"
                 placeholder=" nome"
                 autoFocus
+                onBlur={limparResultado}
               />
               <label className="l_snome">sobre nome:</label>
               <input type="text" className="snome" placeholder=" sobre nome" />
@@ -158,6 +189,8 @@ function Cadcli() {
                 pattern="[@-.-com]"
                 className="email"
                 placeholder=" e-mail"
+                autoFocus
+                onBlur={limparResultado}
               />
               <label className="l_cel">celular:</label>
               <input

@@ -64,17 +64,17 @@
 			"path": "src/Componentes/Cadastro/cadcli.jsx",
 			"bookmarks": [
 				{
-					"line": 103,
+					"line": 133,
 					"column": 6,
 					"label": ""
 				},
 				{
-					"line": 202,
+					"line": 235,
 					"column": 14,
 					"label": "BUTTON"
 				},
 				{
-					"line": 208,
+					"line": 241,
 					"column": 8,
 					"label": "DIV-RES"
 				}
@@ -94,12 +94,12 @@
 			"path": "src/Componentes/Newsletter/newsletter.jsx",
 			"bookmarks": [
 				{
-					"line": 127,
+					"line": 126,
 					"column": 10,
 					"label": "BUTTON clicar"
 				},
 				{
-					"line": 188,
+					"line": 187,
 					"column": 8,
 					"label": "BUTTON fechar"
 				}
