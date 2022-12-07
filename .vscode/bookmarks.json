@@ -64,17 +64,17 @@
 			"path": "src/Componentes/Cadastro/cadcli.jsx",
 			"bookmarks": [
 				{
-					"line": 133,
+					"line": 128,
 					"column": 6,
 					"label": ""
 				},
 				{
-					"line": 235,
+					"line": 229,
 					"column": 14,
 					"label": "BUTTON"
 				},
 				{
-					"line": 241,
+					"line": 235,
 					"column": 8,
 					"label": "DIV-RES"
 				}
@@ -99,7 +99,7 @@
 					"label": "BUTTON clicar"
 				},
 				{
-					"line": 187,
+					"line": 201,
 					"column": 8,
 					"label": "BUTTON fechar"
 				}

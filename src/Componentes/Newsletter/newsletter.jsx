@@ -17,67 +17,54 @@ import itwiter from "../Icons/twiter.svg";
 
 import "../Newsletter/newsletter.css";
 
-
-
-
-
-
 const Newsletter = () => {
-
-  const limparmensagem = () => {
-
+  const limpaNome = () => {
     var res = document.querySelector(".res-newsletter");
-    res.innerHTML = ""
+    res.innerHTML = "";
     var nome = document.querySelector(".i-nome");
-    if (nome.value === "" || nome.value.length <=3) {
+    if (nome.value === "" || nome.value.length <= 3) {
       res.innerHTML = "Campo nome, precisa no minímo 4 caracteres";
-      document.querySelector('.i-nome').focus();      
-     
+      document.querySelector(".i-nome").focus();
+    }
+  };
+  const limpaEmail = () => {   
+    var email = document.querySelector(".i-email");
+    var res = document.querySelector(".res-newsletter");
+    res.innerHTML = "";
+
+    function validarEmail(email) {
+      const isValid = email.includes("@") && email.includes(".");
+      return isValid;
     }    
-
-  }
-
+    if (!validarEmail(email.value) || email.value.length <= 8) {
+      res.innerHTML = "Campo nome, precisa no minímo 4 caracteres";
+      res.setAttribute("style", "display", "block");
+      document.querySelector(".i-email").focus();
+    }
+  };
   const Cadastrar = () => {
     var res = document.querySelector(".res-newsletter");
     var nome = document.querySelector(".i-nome");
     var email = document.querySelector(".i-email");
-    // var onblurnome = document.getElementById('#nome');
-    // var onbluremail = document.getElementById('#email')
-    // var resul = Document.getElementById('#resul')
-    
-
-    if (nome.value === "" || nome.value.length <=3) {
+    if (nome.value === "" || nome.value.length <= 3) {
       res.innerHTML = "Campo nome, precisa no minímo 4 caracteres";
-      document.querySelector('.i-nome').focus(); 
-     
-     
-    }    
-    
-    else if(email.value === '') {
+      document.querySelector(".i-nome").focus();
+    } else if (email.value === "") {
       res.innerHTML = "[ error ] Formato inválido Ex:. @.com";
-      document.querySelector('.i-email').focus();  
-       
-           
-    }
-
-    else {
-      window.location.href = ""
+      document.querySelector(".i-email").focus();
+    } else {
+      window.location.href = "";
     }
   };
-
   const abrirModal = () => {
     const modal = document.getElementById("modal-promocao");
     modal.classList.add("mostrar");
-
-
     modal.addEventListener("click", (e) => {
       if (e.target.id == "fechar") {
         modal.classList.remove("mostrar");
       }
-
     });
   };
-
   return (
     <>
       <section className="corpo">
@@ -184,12 +171,26 @@ const Newsletter = () => {
           <form>
             <div className="dad-nome">
               <label htmlFor="l_nome">Nome:</label>
-              <input type="text" placeholder="Nome" className="i-nome" id="nome" autoComplete="off" onBlur={limparmensagem} />
+              <input
+                type="text"
+                placeholder="Nome"
+                className="i-nome"
+                id="nome"
+                autoComplete="off"
+                onBlur={limpaNome}
+              />
             </div>
 
             <div className="dad-E-mail">
               <label htmlFor="l_email">E-mail:</label>
-              <input type="text" placeholder="E-mail" className="i-email" id="email" autoComplete="off" onBlur={Cadastrar} />
+              <input
+                type="text"
+                placeholder="E-mail"
+                className="i-email"
+                id="email"
+                autoComplete="off"
+                onBlur={limpaEmail}
+              />
             </div>
 
             <div className="dad_button">
@@ -201,11 +202,12 @@ const Newsletter = () => {
               />
             </div>
 
-            <div className="res-newsletter" id="resul" ></div>
+            <div className="res-newsletter" id="resul"></div>
           </form>
         </div>
       </div>
     </>
   );
 };
+
 export default Newsletter;

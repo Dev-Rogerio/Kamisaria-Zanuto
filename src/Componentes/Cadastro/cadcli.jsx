@@ -16,35 +16,30 @@ import iwhats from "../Icons/cwhats.svg";
 import itwiter from "../Icons/twiter.svg";
 
 function Cadcli() {
- 
-   const limparResultado = () => {
-    var nome = window.document.querySelector('.nome');
-    var snome = window.document.querySelector('.snome');
-    var email = window.document.querySelector('.email');
-    var cel = window.document.querySelector('.cel');
-    var data = window.document.querySelector('.data');
-    var cep = window.document.querySelector('.cep');
-    var num = window.document.querySelector('.num');
-    var comp = window.document.querySelector('.comp');
-    var bairro = window.document.querySelector('.bairro');
-    var cid = window.document.querySelector('.cid');
-    var est = window.document.querySelector('.est');    
-    var res = window.document.querySelector('.res_cli');
+  const limparResultado = () => {
+    var nome = window.document.querySelector(".nome");
+    var snome = window.document.querySelector(".snome");
+    var email = window.document.querySelector(".email");
+    var cel = window.document.querySelector(".cel");
+    var data = window.document.querySelector(".data");
+    var cep = window.document.querySelector(".cep");
+    var num = window.document.querySelector(".num");
+    var comp = window.document.querySelector(".comp");
+    var bairro = window.document.querySelector(".bairro");
+    var cid = window.document.querySelector(".cid");
+    var est = window.document.querySelector(".est");
+    var res = window.document.querySelector(".res_cli");
 
-    res.innerHTML = ''
-    
+    res.innerHTML = "";
 
-    if(nome.value === '' || nome.value.length <=3) {
-      res.innerHTML = '[ Error nome ]'
-      window.document.querySelector('.nome').focus();
+    if (nome.value === "" || nome.value.length <= 3) {
+      res.innerHTML = "[ Error nome ]";
+      window.document.querySelector(".nome").focus();
+    } else if (snome.value === "" || snome.value.length <= 2) {
+      res.innerHTML = "[ Error email ]";
+      window.document.querySelector(".snome").focus();
     }
-   
-   else if(snome.value === '' || snome.value.length <=2) {
-      res.innerHTML = '[ Error email ]';
-      window.document.querySelector('.snome').focus();
-    }
-   }
-
+  };
 
   function cadcli(e) {
     var nome = window.document.querySelector(".nome");
@@ -75,7 +70,7 @@ function Cadcli() {
       return isValid;
     }
 
-    if (nome.value === "" || nome.value.length <=2) {
+    if (nome.value === "" || nome.value.length <= 2) {
       res.innerHTML = "Preencher todos os campos";
       document.querySelector(".nome").focus();
     } else if (snome.value === "") {
@@ -136,36 +131,35 @@ function Cadcli() {
           <header className="header_cadcli">
             <img src={Logo} alt="" className="logo_cadcli" />
             <header className="kz_cadcli">KAMISARIA ZANUTO</header>
-             </header>
+          </header>
 
-             <div className="menu">
-          <ul>
-            <Link to="/">
-            <li>Inicio</li>
-            </Link>
-            <li>Quem-somos</li>
-            <li>
-              vestuário
-              <ul>
-                <li className="banner">Camisa fem.</li>
-                <li className="banner">Camisa masc.</li>
-                <Link to="/cadcli">
-                  <li className="banner">Maneq.virtual</li>
-                </Link>
-                <li className="banner">Monograma</li>
-                <Link to="/newsletter">
-                  <li className="banner">Newsletter</li>
+          <div className="menu">
+            <ul>
+              <Link to="/">
+                <li>Inicio</li>
+              </Link>
+              <li>Quem-somos</li>
+              <li>
+                vestuário
+                <ul>
+                  <li className="banner">Camisa fem.</li>
+                  <li className="banner">Camisa masc.</li>
+                  <Link to="/cadcli">
+                    <li className="banner">Maneq.virtual</li>
                   </Link>
-                <li className="banner">sapatos</li>
-              </ul>
-            </li>
-            <li>Serviços</li>
-            <Link to="/contato">
-              <li>Contato</li>
-            </Link>
-          </ul>
-        </div>
-         
+                  <li className="banner">Monograma</li>
+                  <Link to="/newsletter">
+                    <li className="banner">Newsletter</li>
+                  </Link>
+                  <li className="banner">sapatos</li>
+                </ul>
+              </li>
+              <li>Serviços</li>
+              <Link to="/contato">
+                <li>Contato</li>
+              </Link>
+            </ul>
+          </div>
         </div>
 
         <section className="secaopai">
