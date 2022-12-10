@@ -9,52 +9,52 @@
 					"label": "FUNCAO receber"
 				},
 				{
-					"line": 102,
+					"line": 104,
 					"column": 2,
 					"label": "RETURN"
 				},
 				{
-					"line": 144,
+					"line": 146,
 					"column": 16,
 					"label": "INPUT-COLAR"
 				},
 				{
-					"line": 160,
+					"line": 163,
 					"column": 16,
 					"label": "INPUT-PALA"
 				},
 				{
-					"line": 172,
+					"line": 175,
 					"column": 16,
 					"label": "INPUT-MANGA"
 				},
 				{
-					"line": 185,
+					"line": 188,
 					"column": 16,
 					"label": "INPUT-TORAX"
 				},
 				{
-					"line": 197,
+					"line": 200,
 					"column": 16,
 					"label": "INPUY-CINTURA"
 				},
 				{
-					"line": 206,
+					"line": 209,
 					"column": 14,
 					"label": "INPUT-QUADRIL"
 				},
 				{
-					"line": 220,
+					"line": 223,
 					"column": 16,
 					"label": "INPUT-CUMPRIMENTO"
 				},
 				{
-					"line": 230,
+					"line": 233,
 					"column": 12,
 					"label": "INPUT-PUNHO"
 				},
 				{
-					"line": 253,
+					"line": 256,
 					"column": 10,
 					"label": "DIV-RES"
 				}
@@ -64,17 +64,57 @@
 			"path": "src/Componentes/Cadastro/cadcli.jsx",
 			"bookmarks": [
 				{
-					"line": 128,
-					"column": 6,
+					"line": 18,
+					"column": 2,
+					"label": "CONST-limpar-nome"
+				},
+				{
+					"line": 30,
+					"column": 1,
+					"label": "CONST-limpar-sobrenome"
+				},
+				{
+					"line": 42,
+					"column": 1,
+					"label": "CONST-limparemail"
+				},
+				{
+					"line": 57,
+					"column": 2,
 					"label": ""
 				},
 				{
-					"line": 229,
+					"line": 178,
+					"column": 6,
+					"label": "RETURN"
+				},
+				{
+					"line": 220,
+					"column": 14,
+					"label": "INPUT-nome"
+				},
+				{
+					"line": 227,
+					"column": 13,
+					"label": "INPUT-Snome"
+				},
+				{
+					"line": 235,
+					"column": 13,
+					"label": "INPUT-email"
+				},
+				{
+					"line": 244,
+					"column": 14,
+					"label": "INPUT-celular"
+				},
+				{
+					"line": 288,
 					"column": 14,
 					"label": "BUTTON"
 				},
 				{
-					"line": 235,
+					"line": 294,
 					"column": 8,
 					"label": "DIV-RES"
 				}

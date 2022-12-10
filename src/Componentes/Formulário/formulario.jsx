@@ -100,6 +100,8 @@ function Formulario() {
     document.getElementById("figura").src = Monaco;
   }
 
+  
+
   return (
     <>
       <section className="containner_form">
@@ -151,7 +153,8 @@ function Formulario() {
                   className="colar"
                   placeholder="  0.00"
                   maxLength="2"
-                  required
+                  required 
+                  
                 />
                 <h3 className="video">vídeo</h3>
               </div>

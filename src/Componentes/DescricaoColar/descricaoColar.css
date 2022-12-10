@@ -217,7 +217,13 @@ img {
 
 }
 .zoom:hover img {
-    -moz-transform: scale(1.9);
+    width: 190%;
+    height: 190%;
+    /* -moz-transform: scale(1.9);
     -webkit-transform: scale(1.9);
-    transform: scale(1.9);
+    transform: scale(1.9); */
+}
+.zoom:hover {
+    overflow: scroll;
+    position: relative;
 }

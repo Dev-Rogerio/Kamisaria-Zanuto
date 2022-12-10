@@ -16,30 +16,72 @@ import iwhats from "../Icons/cwhats.svg";
 import itwiter from "../Icons/twiter.svg";
 
 function Cadcli() {
-  const limparResultado = () => {
+  const limparNome = () => {
     var nome = window.document.querySelector(".nome");
-    var snome = window.document.querySelector(".snome");
-    var email = window.document.querySelector(".email");
-    var cel = window.document.querySelector(".cel");
-    var data = window.document.querySelector(".data");
-    var cep = window.document.querySelector(".cep");
-    var num = window.document.querySelector(".num");
-    var comp = window.document.querySelector(".comp");
-    var bairro = window.document.querySelector(".bairro");
-    var cid = window.document.querySelector(".cid");
-    var est = window.document.querySelector(".est");
     var res = window.document.querySelector(".res_cli");
 
     res.innerHTML = "";
 
     if (nome.value === "" || nome.value.length <= 3) {
-      res.innerHTML = "[ Error nome ]";
+      res.innerHTML = "[ Error ] Campo nome";
       window.document.querySelector(".nome").focus();
-    } else if (snome.value === "" || snome.value.length <= 2) {
-      res.innerHTML = "[ Error email ]";
+    }
+  };
+
+  const limparSnome = () => {
+    var snome = window.document.querySelector(".snome");
+    var res = window.document.querySelector(".res_cli");
+
+    res.innerHTML = "";
+
+    if (snome.value === "" || snome.value.length <= 7) {
+      res.innerHTML = " [ error ] Campo sobre nome";
       window.document.querySelector(".snome").focus();
     }
   };
+
+  const limparEmail = () => {
+    function validarEmail(index) {
+      const isValid = index.includes("@") && index.includes(".com");
+      return isValid;
+    }
+    var email = window.document.querySelector(".email");
+    var res = window.document.querySelector(".res_cli");
+
+    res.innerHTML = "";
+
+    if (!validarEmail(email.value) || email.value.length < 7) {
+      res.innerHTML = " [ error ] Campo sobre e-mail";
+      window.document.querySelector(".email").focus();
+    }
+  };
+
+  
+  function mphone(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+      r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+    } else if (r.length > 5) {
+      r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+    } else if (r.length > 2) {
+      r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+      r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+  }
+  
+  function mask(target, callback) {
+    setTimeout(() => {
+      var v = callback(target.value);
+      if (v != target.value) {
+        target.value = v;
+      }
+    }, 1);
+  }
+
+ 
 
   function cadcli(e) {
     var nome = window.document.querySelector(".nome");
@@ -124,6 +166,14 @@ function Cadcli() {
     //       res.textContent = "";
   }
 
+  // keyup no input
+  // validar tel com Mascara
+  // Preparação backend
+  // Zoom
+  // index
+  // regex: expressão regular
+  // node_modules
+
   return (
     <>
       <section className="corpo">
@@ -172,26 +222,35 @@ function Cadcli() {
                 type="text"
                 className="nome"
                 placeholder=" nome"
-                autoFocus
-                onBlur={limparResultado}
+                onBlur={limparNome}
               />
+
               <label className="l_snome">sobre nome:</label>
-              <input type="text" className="snome" placeholder=" sobre nome" />
+              <input
+                type="text"
+                className="snome"
+                placeholder=" sobre nome"
+                onBlur={limparSnome}
+              />
+
               <label className="l_email">e-mail:</label>
               <input
                 type="text"
                 pattern="[@-.-com]"
                 className="email"
                 placeholder=" e-mail"
-                autoFocus
-                onBlur={limparResultado}
+                onBlur={limparEmail}
               />
+
               <label className="l_cel">celular:</label>
               <input
-                type="tel"
+                type="text"
                 className="cel"
                 placeholder=" (xx) xxxxx-xxxx"
+                onBlur={(e) => mask(e.target, mphone)}               
+                onKeyUp={(e) => mask(e.target, mphone)}
               />
+
               <label className="l_data">aniversário:</label>
               <input type="text" className="data" placeholder=" dia / mês" />
             </div>
