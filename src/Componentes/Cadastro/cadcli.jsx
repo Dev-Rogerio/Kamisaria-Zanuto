@@ -51,24 +51,34 @@ function Cadcli() {
     res.innerHTML = "";
 
     if (!validarEmail(email.value) || email.value.length < 7) {
-      res.innerHTML = " [ error ] Campo sobre e-mail";
+      res.innerHTML = " [ error ] Campo e-mail";
       window.document.querySelector(".email").focus();
     }
   };
 
   
   function mphone(v) {
+    // var cel = window.document.querySelector('.cel');
+    // var res = window.document.querySelector('.res_cli');
     var r = v.replace(/\D/g, "");
     r = r.replace(/^0/, "");
-    if (r.length > 10) {
+    // res.innerHTML = "";
+
+   
+    if (r.length > 10 ) {
       r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
     } else if (r.length > 5) {
       r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
     } else if (r.length > 2) {
       r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-    } else {
-      r = r.replace(/^(\d*)/, "($1");
+    } else if(r.value) {
+      r = r.replace(/^(\d*)/, "($1");      
     }
+    // else {
+    //   res.innerHTML = "telefone inválido digite (0)";
+    //   window.document.querySelector('.cel').focus();
+    // }
+   
     return r;
   }
   
@@ -76,8 +86,43 @@ function Cadcli() {
     setTimeout(() => {
       var v = callback(target.value);
       if (v != target.value) {
-        target.value = v;
+      target.value = v;
+        
+    }
+    }, 1);
+  }
+
+  function mdate (v) {
+    var res = window.document.querySelector('.res_cli');   
+    var date = window.document.querySelector('.data')
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    res.innerHTML = ""
+    if (date.value === "" || r.length > 7) {
+      r = r.replace(/^(\d{2})(\d{2})(\d{4}).*/,"$1/$2/$3");  
+    }
+    else {
+        res.innerHTML = "Data inválida";  
+        window.document.querySelector('.data').focus();
+
       }
+        
+     
+    // } else if (r.length > 8) {
+    //   r = r.replace(/^(\d{2})(\d{2}).*/, "$1/$2/$3");
+    // } else if (r.length > 2) {
+    //   r = r.replace(/^(\d*)/, "$1");     
+     
+    return r;
+
+  }
+  function mask2(target, calback){
+    setTimeout(() => {
+      var v = calback(target.value);
+      if (v != target.value) {
+        target.value = v
+      }
+      
     }, 1);
   }
 
@@ -252,7 +297,13 @@ function Cadcli() {
               />
 
               <label className="l_data">aniversário:</label>
-              <input type="text" className="data" placeholder=" dia / mês" />
+              <input 
+              type="text" 
+              className="data"
+               placeholder=" dia / mês" 
+               onBlur={(e) => mask2(e.target, mdate)}
+              //  onKeyUp={(e) => mask2(e.target, mdate)}
+               />
             </div>
 
             <div className="lado-endereco">
